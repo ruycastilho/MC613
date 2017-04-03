@@ -1,5 +1,5 @@
 Analysis & Synthesis report for crossbarE
-Mon Apr  3 13:17:10 2017
+Mon Apr  3 13:59:48 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -43,13 +43,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr  3 13:17:09 2017           ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr  3 13:59:48 2017           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; crossbarE                                       ;
 ; Top-level Entity Name              ; crossbarE                                       ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 1                                               ;
-;     Total combinational functions  ; 1                                               ;
+; Total logic elements               ; 2                                               ;
+;     Total combinational functions  ; 2                                               ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 15                                              ;
@@ -156,59 +156,57 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                  ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                           ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; ../ex 1c/crossbarC.vhd           ; yes             ; User VHDL File  ; /home/ec2015/ra177012/mc613/lab 4/ex 1c/crossbarC.vhd  ;         ;
-; ../../lab 3/ex 2a/conv_gray.vhd  ; yes             ; User VHDL File  ; /home/ec2015/ra177012/mc613/lab 3/ex 2a/conv_gray.vhd  ;         ;
-; ../ex 1d/crossbarD.vhd           ; yes             ; User VHDL File  ; /home/ec2015/ra177012/mc613/lab 4/ex 1d/crossbarD.vhd  ;         ;
-; ../../lab 3/ex 2d/conv_7seg.vhd  ; yes             ; User VHDL File  ; /home/ec2015/ra177012/mc613/lab 3/ex 2d/conv_7seg.vhd  ;         ;
-; crossbarE.vhd                    ; yes             ; User VHDL File  ; /home/ec2015/ra177012/mc613/lab 4/ex 1e/crossbarE.vhd  ;         ;
-; demo_setup.vhd                   ; yes             ; User VHDL File  ; /home/ec2015/ra177012/mc613/lab 4/ex 1e/demo_setup.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                            ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
+; ../ex 1c/crossbarC.vhd           ; yes             ; User VHDL File  ; /home/ec2015/ra177012/Documents/MC613/lab 4/ex 1c/crossbarC.vhd  ;         ;
+; ../ex 1d/crossbarD.vhd           ; yes             ; User VHDL File  ; /home/ec2015/ra177012/Documents/MC613/lab 4/ex 1d/crossbarD.vhd  ;         ;
+; crossbarE.vhd                    ; yes             ; User VHDL File  ; /home/ec2015/ra177012/Documents/MC613/lab 4/ex 1e/crossbarE.vhd  ;         ;
+; demo_setup.vhd                   ; yes             ; User VHDL File  ; /home/ec2015/ra177012/Documents/MC613/lab 4/ex 1e/demo_setup.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                     ;
-+---------------------------------------------+---------------------------------------------------+
-; Resource                                    ; Usage                                             ;
-+---------------------------------------------+---------------------------------------------------+
-; Estimated Total logic elements              ; 1                                                 ;
-;                                             ;                                                   ;
-; Total combinational functions               ; 1                                                 ;
-; Logic element usage by number of LUT inputs ;                                                   ;
-;     -- 4 input functions                    ; 0                                                 ;
-;     -- 3 input functions                    ; 1                                                 ;
-;     -- <=2 input functions                  ; 0                                                 ;
-;                                             ;                                                   ;
-; Logic elements by mode                      ;                                                   ;
-;     -- normal mode                          ; 1                                                 ;
-;     -- arithmetic mode                      ; 0                                                 ;
-;                                             ;                                                   ;
-; Total registers                             ; 0                                                 ;
-;     -- Dedicated logic registers            ; 0                                                 ;
-;     -- I/O registers                        ; 0                                                 ;
-;                                             ;                                                   ;
-; I/O pins                                    ; 15                                                ;
-; Embedded Multiplier 9-bit elements          ; 0                                                 ;
-; Maximum fan-out node                        ; crossbarD:Crossbar|crossbarC:\C1:1:Crossbars|y1~0 ;
-; Maximum fan-out                             ; 2                                                 ;
-; Total fan-out                               ; 5                                                 ;
-; Average fan-out                             ; 0.31                                              ;
-+---------------------------------------------+---------------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                   ;
++---------------------------------------------+-------------------------------------------------+
+; Resource                                    ; Usage                                           ;
++---------------------------------------------+-------------------------------------------------+
+; Estimated Total logic elements              ; 2                                               ;
+;                                             ;                                                 ;
+; Total combinational functions               ; 2                                               ;
+; Logic element usage by number of LUT inputs ;                                                 ;
+;     -- 4 input functions                    ; 1                                               ;
+;     -- 3 input functions                    ; 0                                               ;
+;     -- <=2 input functions                  ; 1                                               ;
+;                                             ;                                                 ;
+; Logic elements by mode                      ;                                                 ;
+;     -- normal mode                          ; 2                                               ;
+;     -- arithmetic mode                      ; 0                                               ;
+;                                             ;                                                 ;
+; Total registers                             ; 0                                               ;
+;     -- Dedicated logic registers            ; 0                                               ;
+;     -- I/O registers                        ; 0                                               ;
+;                                             ;                                                 ;
+; I/O pins                                    ; 15                                              ;
+; Embedded Multiplier 9-bit elements          ; 0                                               ;
+; Maximum fan-out node                        ; crossbarD:Crossbar|crossbarC:\C2:CrossbarN|y1~1 ;
+; Maximum fan-out                             ; 2                                               ;
+; Total fan-out                               ; 8                                               ;
+; Average fan-out                             ; 0.47                                            ;
++---------------------------------------------+-------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                    ;
-+-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
-; Compilation Hierarchy Node        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Library Name ;
-+-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
-; |crossbarE                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |crossbarE                                              ; work         ;
-;    |crossbarD:Crossbar|           ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |crossbarE|crossbarD:Crossbar                           ; work         ;
-;       |crossbarC:\C1:1:Crossbars| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |crossbarE|crossbarD:Crossbar|crossbarC:\C1:1:Crossbars ; work         ;
-+-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
+; |crossbarE                      ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |crossbarE                                            ; work         ;
+;    |crossbarD:Crossbar|         ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |crossbarE|crossbarD:Crossbar                         ; work         ;
+;       |crossbarC:\C2:CrossbarN| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |crossbarE|crossbarD:Crossbar|crossbarC:\C2:CrossbarN ; work         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -252,7 +250,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -262,23 +260,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Apr  3 13:16:56 2017
+    Info: Processing started: Mon Apr  3 13:59:47 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex1e -c crossbarE
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /home/ec2015/ra177012/mc613/lab 4/ex 1c/crossbarC.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /home/ec2015/ra177012/Documents/MC613/lab 4/ex 1c/crossbarC.vhd
     Info (12022): Found design unit 1: crossbarC-Behavior
     Info (12023): Found entity 1: crossbarC
-Info (12021): Found 3 design units, including 1 entities, in source file /home/ec2015/ra177012/mc613/lab 3/ex 2a/conv_gray.vhd
-    Info (12022): Found design unit 1: display_segmentos
-    Info (12022): Found design unit 2: conv_gray-Behavior
-    Info (12023): Found entity 1: conv_gray
-Info (12021): Found 3 design units, including 1 entities, in source file /home/ec2015/ra177012/mc613/lab 4/ex 1d/crossbarD.vhd
+Info (12021): Found 3 design units, including 1 entities, in source file /home/ec2015/ra177012/Documents/MC613/lab 4/ex 1d/crossbarD.vhd
     Info (12022): Found design unit 1: crossbarC_package
     Info (12022): Found design unit 2: crossbarD-Structure
     Info (12023): Found entity 1: crossbarD
-Info (12021): Found 2 design units, including 1 entities, in source file /home/ec2015/ra177012/mc613/lab 3/ex 2d/conv_7seg.vhd
-    Info (12022): Found design unit 1: conv_7seg-Behavior
-    Info (12023): Found entity 1: conv_7seg
 Info (12021): Found 3 design units, including 1 entities, in source file crossbarE.vhd
     Info (12022): Found design unit 1: crossbarD_package
     Info (12022): Found design unit 2: crossbarE-Behavior
@@ -302,17 +293,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[9]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[0]"
-    Warning (15610): No output dependent on input pin "SW[1]"
-Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 1 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 378 megabytes
-    Info: Processing ended: Mon Apr  3 13:17:13 2017
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:02
+    Info (21061): Implemented 2 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 365 megabytes
+    Info: Processing ended: Mon Apr  3 13:59:48 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -1,9 +1,9 @@
 |crossbarE
-SW[0] => crossbard:Crossbar.S[4]
-SW[1] => crossbard:Crossbar.S[3]
+SW[0] => crossbard:Crossbar.S[0]
+SW[1] => crossbard:Crossbar.S[1]
 SW[2] => crossbard:Crossbar.S[2]
-SW[3] => crossbard:Crossbar.S[1]
-SW[4] => crossbard:Crossbar.S[0]
+SW[3] => crossbard:Crossbar.S[3]
+SW[4] => crossbard:Crossbar.S[4]
 LEDR[0] <= crossbard:Crossbar.Y1
 LEDR[1] <= crossbard:Crossbar.Y2
 LEDR[2] <= <GND>
@@ -19,12 +19,11 @@ LEDR[9] <= <GND>
 |crossbarE|crossbarD:Crossbar
 X1 => crossbarc:Crossbar1.x1
 X2 => crossbarc:Crossbar1.x2
-S[4] => ~NO_FANOUT~
-S[3] => crossbarc:C1:2:Crossbars.s
-S[3] => crossbarc:C2:CrossbarN.s
-S[2] => crossbarc:C1:1:Crossbars.s
-S[1] => crossbarc:C1:0:Crossbars.s
 S[0] => crossbarc:Crossbar1.s
+S[1] => crossbarc:C1:2:Crossbars.s
+S[2] => crossbarc:C1:1:Crossbars.s
+S[3] => crossbarc:C1:0:Crossbars.s
+S[4] => crossbarc:C2:CrossbarN.s
 Y1 <= crossbarc:C2:CrossbarN.y1
 Y2 <= crossbarc:C2:CrossbarN.y2
 
