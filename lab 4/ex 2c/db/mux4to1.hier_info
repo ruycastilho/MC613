@@ -1,0 +1,45 @@
+|mux4to1
+En => dec2to4:dec1.En
+s[0] => dec2to4:dec1.w[0]
+s[1] => dec2to4:dec1.w[1]
+w[0] => caixapontilhada:caixa1.w[0]
+w[1] => caixapontilhada:caixa1.w[1]
+w[2] => caixapontilhada:caixa1.w[2]
+w[3] => caixapontilhada:caixa1.w[3]
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux4to1|dec2to4:dec1
+En => Mux0.IN8
+En => Mux1.IN8
+En => Mux2.IN8
+En => Mux3.IN8
+w[0] => Mux0.IN10
+w[0] => Mux1.IN10
+w[0] => Mux2.IN10
+w[0] => Mux3.IN10
+w[1] => Mux0.IN9
+w[1] => Mux1.IN9
+w[1] => Mux2.IN9
+w[1] => Mux3.IN9
+y[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux4to1|caixaPontilhada:caixa1
+y[0] => f.IN0
+y[1] => f.IN0
+y[2] => f.IN0
+y[3] => f.IN0
+w[0] => f.IN1
+w[1] => f.IN1
+w[2] => f.IN1
+w[3] => f.IN1
+f[0] <= f.DB_MAX_OUTPUT_PORT_TYPE
+f[1] <= f.DB_MAX_OUTPUT_PORT_TYPE
+f[2] <= f.DB_MAX_OUTPUT_PORT_TYPE
+f[3] <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+

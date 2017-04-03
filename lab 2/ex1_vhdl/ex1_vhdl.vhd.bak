@@ -1,0 +1,16 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all ;
+ENTITY 
+ex1_vhdl
+IS
+PORT ( A, B, C, D, E : IN STD_LOGIC ;
+f : OUT STD_LOGIC ) ;
+END 
+ex1_vhdl
+;
+ARCHITECTURE LogicFunction OF 
+ex1_vhdl
+IS
+BEGIN
+f <= (x1 AND NOT x2) OR (NOT x1 AND x2);
+END LogicFunction ;

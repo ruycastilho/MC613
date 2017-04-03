@@ -1,0 +1,16 @@
+LIBRARY ieee ; 
+USE ieee.std_logic_1164.all ; 
+
+ENTITY bus32adapter IS 
+
+	PORT (X: IN STD_LOGIC_VECTOR(N-1 DOWNTO 0) ; 
+		Z: IN STD_LOGIC ; 
+		B: OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0)) ; 
+		
+END bus32adapter ; 
+
+ARCHITECTURE behavior OF bus32adapter IS
+BEGIN       
+
+ 
+END behavior ; 

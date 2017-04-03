@@ -1,0 +1,11 @@
+|crossbarC
+x1 => y1~0.DATAB
+x1 => y2~0.DATAA
+x2 => y1~0.DATAA
+x2 => y2~0.DATAB
+s => y1~0.OUTPUTSELECT
+s => y2~0.OUTPUTSELECT
+y1 <= y1~0.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

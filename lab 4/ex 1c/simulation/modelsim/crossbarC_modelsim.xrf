@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, /home/ec2015/ra177012/mc613/lab 4/ex 1c/crossbarC.vhd
+source_file = 1, /home/ec2015/ra177012/mc613/lab 4/ex 1c/db/crossbarC.cbx.xml
+source_file = 1, /opt/altera13sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, /opt/altera13sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, /opt/altera13sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, /opt/altera13sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = crossbarC
+instance = comp, \y1~output\, y1~output, crossbarC, 1
+instance = comp, \y2~output\, y2~output, crossbarC, 1
+instance = comp, \x2~input\, x2~input, crossbarC, 1
+instance = comp, \x1~input\, x1~input, crossbarC, 1
+instance = comp, \s~input\, s~input, crossbarC, 1
+instance = comp, \y1~0\, y1~0, crossbarC, 1
+instance = comp, \y2~0\, y2~0, crossbarC, 1

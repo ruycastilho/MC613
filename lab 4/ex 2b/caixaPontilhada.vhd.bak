@@ -1,0 +1,20 @@
+LIBRARY ieee ; 
+USE ieee.std_logic_1164.all;
+
+ENTITY dec2to4 IS 
+	PORT (
+			s:		IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+			w:		IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			f: 	OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+
+END dec2to4;
+
+ARCHITECTURE Behavior OF dec2to4 IS
+	BEGIN 
+		WITH s SELECT 
+		y1 <= x1 WHEN '0',	
+				x2 WHEN OTHERS;
+		WITH s SELECT
+		y2 <= x2 WHEN '0',
+				x1 WHEN OTHERS;
+END Behavior ;

@@ -1,0 +1,42 @@
+|ex1_vhdl
+A => Y~23.IN0
+A => Y~32.IN0
+A => Y~0.IN0
+A => Y~11.IN0
+B => Y~11.IN1
+B => Y~32.IN1
+B => Y~0.IN1
+B => Y~23.IN1
+C => Y~7.IN1
+C => Y~16.IN1
+C => Y~28.IN1
+C => Y~37.IN1
+C => Y~1.IN1
+C => Y~12.IN1
+C => Y~24.IN1
+C => Y~33.IN1
+D => Y~4.IN1
+D => Y~20.IN1
+D => Y~25.IN1
+D => Y~41.IN1
+D => Y~2.IN1
+D => Y~8.IN1
+D => Y~13.IN1
+D => Y~17.IN1
+D => Y~29.IN1
+D => Y~34.IN1
+D => Y~38.IN1
+E => Y~9.IN1
+E => Y~18.IN1
+E => Y~21.IN1
+E => Y~30.IN1
+E => Y~39.IN1
+E => Y~42.IN1
+E => Y~3.IN1
+E => Y~5.IN1
+E => Y~14.IN1
+E => Y~26.IN1
+E => Y~35.IN1
+Y <= Y~43.DB_MAX_OUTPUT_PORT_TYPE
+
+

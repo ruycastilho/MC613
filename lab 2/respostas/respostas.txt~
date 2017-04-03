@@ -1,0 +1,26 @@
+MC613 B
+Nome: Ruy Castilho Barrichelo
+RA: 177012
+
+
+
+Questão 2:
+c) A simulação de timing do circuito difere da simulação funcional na medida em
+que não só exibe os atrasos nas mudanças da saída, mas também gera um glitch.
+Isso é observado pela existência de uma mudança na saída, de duração muito 
+curta, onde não há alteração do valor das entradas B e C, que, em teoria, não 
+causaria um hazard, mas devido aos atrasos, ele ocorre.
+Ou seja, em um momento, B tem valor 0 e C, valor 1, porém, no instante em 
+questão, as duas entradas invertem seus valores, Então, a porta AND inferior
+(no esquema disponibilizado) não deveria ter saída 1, pois necessita de ambas 
+entradas B e C com valor 1, no entanto, esse resultado aparece por um breve 
+momento.
+Esse comportamento é o esperado em relação a hazards, já que, após o glitch, a 
+resposta se estabiliza, então se torna confiável novamente.
+
+d) A explicação do ocorrido é a diferença entre atrasos de diferentes caminhos 
+do circuito. Ou seja, a entrada A e a C atingem, por exemplo, a porta OR, em 
+instantes diferentes, visto que o caminho de A é crítico. Portanto, nos 
+instantes antes da chegada de ambos, a saída se torna instável, ao considerar 
+valores lógicos indesejados.
+
