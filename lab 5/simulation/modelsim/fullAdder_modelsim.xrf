@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, /home/ec2015/ra177012/mc613/lab 5/fullAdder.vhd
+source_file = 1, /home/ec2015/ra177012/mc613/lab 5/Waveform.vwf
+source_file = 1, /home/ec2015/ra177012/mc613/lab 5/db/fullAdder.cbx.xml
+source_file = 1, /opt/altera13sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, /opt/altera13sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, /opt/altera13sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, /opt/altera13sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = fullAdder
+instance = comp, \cin~I , cin, fullAdder, 1
+instance = comp, \y~I , y, fullAdder, 1
+instance = comp, \x~I , x, fullAdder, 1
+instance = comp, \f~0 , f~0, fullAdder, 1
+instance = comp, \cout~0 , cout~0, fullAdder, 1
+instance = comp, \f~I , f, fullAdder, 1
+instance = comp, \cout~I , cout, fullAdder, 1

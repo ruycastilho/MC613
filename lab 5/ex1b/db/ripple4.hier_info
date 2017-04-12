@@ -1,0 +1,40 @@
+|ripple4
+x[0] => fulladder:fa1.x
+x[1] => fulladder:g1:1:FA.x
+y[0] => fulladder:fa1.y
+y[1] => fulladder:g1:1:FA.y
+cin => fulladder:fa1.cin
+f[0] <= fulladder:fa1.f
+f[1] <= fulladder:g1:1:FA.f
+cout <= fulladder:g1:1:FA.cout
+v <= v.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple4|fullAdder:fa1
+x => f.IN0
+x => cout.IN0
+x => cout.IN0
+y => f.IN1
+y => cout.IN1
+y => cout.IN0
+cin => f.IN1
+cin => cout.IN1
+cin => cout.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple4|fullAdder:\g1:1:FA
+x => f.IN0
+x => cout.IN0
+x => cout.IN0
+y => f.IN1
+y => cout.IN1
+y => cout.IN0
+cin => f.IN1
+cin => cout.IN1
+cin => cout.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

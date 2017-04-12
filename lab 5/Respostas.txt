@@ -1,0 +1,15 @@
+Ruy Castilho Barrichelo
+RA 177012
+
+Respostas
+
+Tempos de Atraso:
+e)
+f)
+g)
+
+Os tempos de atraso estão de acordo com o esperado, já que o atraso do ripple 
+carry é diretamente proporcional ao número de bits utilizado, como visto na 
+fórmula exposta durante a aula 5. Isto é, é a soma dos atrasos de cada full 
+adder, logo, quanto maior a quantidade de FAs, maior o atraso.
+
