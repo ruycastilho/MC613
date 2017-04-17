@@ -4,9 +4,9 @@ RA 177012
 Respostas
 
 Tempos de Atraso:
-e)
-f)
-g)
+e)7.915 ns
+f)14.783 ns
+g)46.994 ns
 
 Os tempos de atraso estão de acordo com o esperado, já que o atraso do ripple 
 carry é diretamente proporcional ao número de bits utilizado, como visto na 
