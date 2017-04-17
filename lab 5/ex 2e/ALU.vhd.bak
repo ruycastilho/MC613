@@ -1,0 +1,48 @@
+LIBRARY ieee ; 
+USE ieee.std_logic_1164.all;
+LIBRARY work; 
+USE work.all;
+
+ENTITY ALU IS 
+	PORT (A:		IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			B:		IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			S: 	IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+			F:		OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+			Z: OUT STD_LOGIC;
+			C: OUT STD_LOGIC;
+			N: OUT STD_LOGIC;
+			V: OUT STD_LOGIC);
+
+END ALU;
+
+ARCHITECTURE Behavior OF ALU IS
+	SIGNAL c_out : STD_LOGIC;
+	SIGNAL ripple_B : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL ripple_c_in : STD_LOGIC;
+	SIGNAL ripple_F : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL ripple_v : STD_LOGIC;
+	
+	BEGIN	
+
+	ripple: ripple4 
+	GENERIC MAP( N =>4 ) PORT MAP
+	(A, ripple_B, ripple_c_in, ripple_F, C, V);
+	
+	WITH S SELECT
+		ripple_B <= (B XOR "1111") WHEN "10",
+						B WHEN OTHERS;
+						
+	WITH S SELECT
+		ripple_c_in <= '1' WHEN "10",
+							'0' WHEN OTHERS;
+							
+	WITH S SELECT						
+		F <= 	ripple_F WHEN "10",
+				ripple_F WHEN "00",
+				(A AND B)WHEN "01",
+				(A OR B) WHEN "11";
+	
+	N <= '1' WHEN ripple_F(3) = '1' ELSE '0';
+	Z <= '1' WHEN ripple_F = "0000" ELSE '0';
+							
+END Behavior ;

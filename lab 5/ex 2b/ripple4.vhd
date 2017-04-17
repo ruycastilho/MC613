@@ -4,7 +4,7 @@ LIBRARY work;
 USE work.all;
 
 ENTITY ripple4 IS 
-	GENERIC (N : INTEGER := 4);
+	GENERIC (N : INTEGER := 2);
 	PORT (x:		IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 			y:		IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 			cin: 	IN STD_LOGIC;
