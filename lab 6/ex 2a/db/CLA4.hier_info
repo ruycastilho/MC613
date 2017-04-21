@@ -1,68 +1,4 @@
-|demo_setup
-SW[0] => cla4:cla.X[0]
-SW[1] => cla4:cla.X[1]
-SW[2] => cla4:cla.X[2]
-SW[3] => cla4:cla.X[3]
-SW[4] => cla4:cla.Y[0]
-SW[5] => cla4:cla.Y[1]
-SW[6] => cla4:cla.Y[2]
-SW[7] => cla4:cla.Y[3]
-SW[8] => cla4:cla.cin
-SW[9] => ~NO_FANOUT~
-KEY[0] => ~NO_FANOUT~
-KEY[1] => ~NO_FANOUT~
-KEY[2] => ~NO_FANOUT~
-KEY[3] => ~NO_FANOUT~
-LEDR[0] <= cla4:cla.cout
-LEDR[1] <= <GND>
-LEDR[2] <= <GND>
-LEDR[3] <= <GND>
-LEDR[4] <= <GND>
-LEDR[5] <= <GND>
-LEDR[6] <= <GND>
-LEDR[7] <= <GND>
-LEDR[8] <= <GND>
-LEDR[9] <= <GND>
-LEDG[0] <= LEDG[0].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[1] <= LEDG[1].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[2] <= LEDG[2].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[3] <= LEDG[3].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[4] <= LEDG[4].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[5] <= LEDG[5].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[6] <= LEDG[6].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[7] <= LEDG[7].DB_MAX_OUTPUT_PORT_TYPE
-HEX0[0] <= display7seg:display.HEX0[0]
-HEX0[1] <= display7seg:display.HEX0[1]
-HEX0[2] <= display7seg:display.HEX0[2]
-HEX0[3] <= display7seg:display.HEX0[3]
-HEX0[4] <= display7seg:display.HEX0[4]
-HEX0[5] <= display7seg:display.HEX0[5]
-HEX0[6] <= display7seg:display.HEX0[6]
-HEX1[0] <= display7seg:display.HEX1[0]
-HEX1[1] <= display7seg:display.HEX1[1]
-HEX1[2] <= display7seg:display.HEX1[2]
-HEX1[3] <= display7seg:display.HEX1[3]
-HEX1[4] <= display7seg:display.HEX1[4]
-HEX1[5] <= display7seg:display.HEX1[5]
-HEX1[6] <= display7seg:display.HEX1[6]
-HEX2[0] <= HEX2[0].DB_MAX_OUTPUT_PORT_TYPE
-HEX2[1] <= HEX2[1].DB_MAX_OUTPUT_PORT_TYPE
-HEX2[2] <= HEX2[2].DB_MAX_OUTPUT_PORT_TYPE
-HEX2[3] <= HEX2[3].DB_MAX_OUTPUT_PORT_TYPE
-HEX2[4] <= HEX2[4].DB_MAX_OUTPUT_PORT_TYPE
-HEX2[5] <= HEX2[5].DB_MAX_OUTPUT_PORT_TYPE
-HEX2[6] <= HEX2[6].DB_MAX_OUTPUT_PORT_TYPE
-HEX3[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-HEX3[1] <= HEX3[1].DB_MAX_OUTPUT_PORT_TYPE
-HEX3[2] <= HEX3[2].DB_MAX_OUTPUT_PORT_TYPE
-HEX3[3] <= HEX3[3].DB_MAX_OUTPUT_PORT_TYPE
-HEX3[4] <= HEX3[4].DB_MAX_OUTPUT_PORT_TYPE
-HEX3[5] <= HEX3[5].DB_MAX_OUTPUT_PORT_TYPE
-HEX3[6] <= HEX3[6].DB_MAX_OUTPUT_PORT_TYPE
-CLOCK_50 => ~NO_FANOUT~
-
-
-|demo_setup|CLA4:cla
+|CLA4
 X[0] => g[0].IN0
 X[0] => p.IN0
 X[0] => fulladder:fa0.x
@@ -97,7 +33,7 @@ F[2] <= fulladder:g1:2:fa.f
 F[3] <= fulladder:g1:3:fa.f
 
 
-|demo_setup|CLA4:cla|fullAdder:fa0
+|CLA4|fullAdder:fa0
 x => f.IN0
 x => cout.IN0
 x => cout.IN0
@@ -111,7 +47,7 @@ f <= f.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|demo_setup|CLA4:cla|fullAdder:\g1:1:fa
+|CLA4|fullAdder:\g1:1:fa
 x => f.IN0
 x => cout.IN0
 x => cout.IN0
@@ -125,7 +61,7 @@ f <= f.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|demo_setup|CLA4:cla|fullAdder:\g1:2:fa
+|CLA4|fullAdder:\g1:2:fa
 x => f.IN0
 x => cout.IN0
 x => cout.IN0
@@ -139,7 +75,7 @@ f <= f.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|demo_setup|CLA4:cla|fullAdder:\g1:3:fa
+|CLA4|fullAdder:\g1:3:fa
 x => f.IN0
 x => cout.IN0
 x => cout.IN0
@@ -151,49 +87,5 @@ cin => cout.IN1
 cin => cout.IN1
 f <= f.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|demo_setup|display7seg:display
-SW[0] => Mux0.IN19
-SW[0] => Mux1.IN19
-SW[0] => Mux2.IN10
-SW[0] => Mux3.IN10
-SW[0] => Mux4.IN19
-SW[0] => Mux5.IN19
-SW[0] => Mux6.IN19
-SW[1] => Mux0.IN18
-SW[1] => Mux1.IN18
-SW[1] => Mux2.IN9
-SW[1] => Mux3.IN9
-SW[1] => Mux4.IN18
-SW[1] => Mux5.IN18
-SW[1] => Mux6.IN18
-SW[2] => Mux0.IN17
-SW[2] => Mux1.IN17
-SW[2] => Mux2.IN8
-SW[2] => Mux3.IN8
-SW[2] => Mux4.IN17
-SW[2] => Mux5.IN17
-SW[2] => Mux6.IN17
-SW[3] => Mux0.IN16
-SW[3] => Mux1.IN16
-SW[3] => Mux4.IN16
-SW[3] => Mux5.IN16
-SW[3] => Mux6.IN16
-SW[3] => HEX1[6].DATAIN
-HEX0[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-HEX1[0] <= <VCC>
-HEX1[1] <= <VCC>
-HEX1[2] <= <VCC>
-HEX1[3] <= <VCC>
-HEX1[4] <= <VCC>
-HEX1[5] <= <VCC>
-HEX1[6] <= SW[3].DB_MAX_OUTPUT_PORT_TYPE
 
 

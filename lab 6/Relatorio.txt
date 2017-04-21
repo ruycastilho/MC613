@@ -1,0 +1,30 @@
+MC613 - 1s2017
+Lab 6
+Ruy Castilho Barrichelo. RA: 177012
+
+Respostas
+
+2.
+
+a)
+O tempo de atraso do caminho crítico para o somador CLA foi: 6,836 unidades de tempo.
+Enquanto o tempo para o Ripple Carry foi: 7.915 unidades de tempo.
+
+Para poucos bits, pode-se perceber que a diferença é pequena, no entanto, o CLA é 
+mais rápido.
+
+b)
+O tempo de atraso do caminho crítico para o somador CLA parcial foi: 8,64 unidades de
+tempo.
+Enquanto o tempo para o Ripple Carry foi: 14.783 unidades de tempo.
+
+Já para 8 bits, a diferença é grande, e o CLA ainda é mais rápido.
+
+c)
+O tempo de atraso do caminho crítico para o somador CLA foi: 8,64 unidades de tempo.
+Enquanto o tempo para o Ripple Carry foi: 14.783 unidades de tempo.
+
+Percebe-se que a implementação parcial e a sem ligação obtiveram o mesmo resultado, o 
+que não é um resultado absurdo devido à pequena propagação de sinal de um CLA para o 
+outro por meio do carry, mas possivelmente deveria ser diferente, em que a parcial é 
+mais lenta do que a sem cascata.

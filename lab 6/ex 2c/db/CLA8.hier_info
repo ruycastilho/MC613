@@ -1,0 +1,175 @@
+|CLA8
+X[0] => g[0].IN0
+X[0] => p.IN0
+X[0] => fulladder:fa0.x
+X[1] => g[1].IN0
+X[1] => p.IN0
+X[1] => fulladder:g1:1:fa.x
+X[2] => g[2].IN0
+X[2] => p.IN0
+X[2] => fulladder:g1:2:fa.x
+X[3] => g[3].IN0
+X[3] => p.IN0
+X[3] => fulladder:g1:3:fa.x
+X[4] => g[4].IN0
+X[4] => p.IN0
+X[4] => fulladder:g1:4:fa.x
+X[5] => g[5].IN0
+X[5] => p.IN0
+X[5] => fulladder:g1:5:fa.x
+X[6] => g[6].IN0
+X[6] => p.IN0
+X[6] => fulladder:g1:6:fa.x
+X[7] => g[7].IN0
+X[7] => p.IN0
+X[7] => fulladder:g1:7:fa.x
+Y[0] => g[0].IN1
+Y[0] => p.IN1
+Y[0] => fulladder:fa0.y
+Y[1] => g[1].IN1
+Y[1] => p.IN1
+Y[1] => fulladder:g1:1:fa.y
+Y[2] => g[2].IN1
+Y[2] => p.IN1
+Y[2] => fulladder:g1:2:fa.y
+Y[3] => g[3].IN1
+Y[3] => p.IN1
+Y[3] => fulladder:g1:3:fa.y
+Y[4] => g[4].IN1
+Y[4] => p.IN1
+Y[4] => fulladder:g1:4:fa.y
+Y[5] => g[5].IN1
+Y[5] => p.IN1
+Y[5] => fulladder:g1:5:fa.y
+Y[6] => g[6].IN1
+Y[6] => p.IN1
+Y[6] => fulladder:g1:6:fa.y
+Y[7] => g[7].IN1
+Y[7] => p.IN1
+Y[7] => fulladder:g1:7:fa.y
+cin => p[0].IN1
+cin => c.IN1
+cin => fulladder:fa0.cin
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+F[0] <= fulladder:fa0.f
+F[1] <= fulladder:g1:1:fa.f
+F[2] <= fulladder:g1:2:fa.f
+F[3] <= fulladder:g1:3:fa.f
+F[4] <= fulladder:g1:4:fa.f
+F[5] <= fulladder:g1:5:fa.f
+F[6] <= fulladder:g1:6:fa.f
+F[7] <= fulladder:g1:7:fa.f
+
+
+|CLA8|fullAdder:fa0
+x => f.IN0
+x => cout.IN0
+x => cout.IN0
+y => f.IN1
+y => cout.IN1
+y => cout.IN0
+cin => f.IN1
+cin => cout.IN1
+cin => cout.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CLA8|fullAdder:\g1:1:fa
+x => f.IN0
+x => cout.IN0
+x => cout.IN0
+y => f.IN1
+y => cout.IN1
+y => cout.IN0
+cin => f.IN1
+cin => cout.IN1
+cin => cout.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CLA8|fullAdder:\g1:2:fa
+x => f.IN0
+x => cout.IN0
+x => cout.IN0
+y => f.IN1
+y => cout.IN1
+y => cout.IN0
+cin => f.IN1
+cin => cout.IN1
+cin => cout.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CLA8|fullAdder:\g1:3:fa
+x => f.IN0
+x => cout.IN0
+x => cout.IN0
+y => f.IN1
+y => cout.IN1
+y => cout.IN0
+cin => f.IN1
+cin => cout.IN1
+cin => cout.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CLA8|fullAdder:\g1:4:fa
+x => f.IN0
+x => cout.IN0
+x => cout.IN0
+y => f.IN1
+y => cout.IN1
+y => cout.IN0
+cin => f.IN1
+cin => cout.IN1
+cin => cout.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CLA8|fullAdder:\g1:5:fa
+x => f.IN0
+x => cout.IN0
+x => cout.IN0
+y => f.IN1
+y => cout.IN1
+y => cout.IN0
+cin => f.IN1
+cin => cout.IN1
+cin => cout.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CLA8|fullAdder:\g1:6:fa
+x => f.IN0
+x => cout.IN0
+x => cout.IN0
+y => f.IN1
+y => cout.IN1
+y => cout.IN0
+cin => f.IN1
+cin => cout.IN1
+cin => cout.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CLA8|fullAdder:\g1:7:fa
+x => f.IN0
+x => cout.IN0
+x => cout.IN0
+y => f.IN1
+y => cout.IN1
+y => cout.IN0
+cin => f.IN1
+cin => cout.IN1
+cin => cout.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
