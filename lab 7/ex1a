@@ -1,0 +1,16 @@
+Componentes
+
+1 latch D com entrada A barrada chaveado em B barrado
+
+2 latch JK , A K, B J chaveado pelo clk
+
+
+3 latch D  entrada A, chaveado pelo clk 
+
+4 flip flop D, descida do clk , entrada A,preset assincrono em m barrado
+
+5 ff jk, j = a k = b, subida do clk preset assincrono em m barrado
+
+6  ff T ( b) subida do clk
+
+
