@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ex1
-Wed Apr 26 16:47:06 2017
+Wed Apr 26 17:24:48 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 26 16:47:05 2017           ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 26 17:24:48 2017           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ex1                                             ;
 ; Top-level Entity Name              ; ex1                                             ;
@@ -217,7 +217,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -227,7 +227,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Apr 26 16:46:51 2017
+    Info: Processing started: Wed Apr 26 17:24:46 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex1d -c ex1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file ex1.vhd
@@ -236,6 +236,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file ex1.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file Q1.vhd
     Info (12022): Found design unit 1: Q1-Behavior
     Info (12023): Found entity 1: Q1
+Info (12021): Found 2 design units, including 1 entities, in source file Q2.vhd
+    Info (12022): Found design unit 1: Q2-Behavior
+    Info (12023): Found entity 1: Q2
+Info (12021): Found 2 design units, including 1 entities, in source file Q3.vhd
+    Info (12022): Found design unit 1: Q3-Behavior
+    Info (12023): Found entity 1: Q3
+Info (12021): Found 2 design units, including 1 entities, in source file Q4.vhd
+    Info (12022): Found design unit 1: Q4-Behavior
+    Info (12023): Found entity 1: Q4
+Info (12021): Found 2 design units, including 1 entities, in source file Q5.vhd
+    Info (12022): Found design unit 1: Q5-Behavior
+    Info (12023): Found entity 1: Q5
+Info (12021): Found 2 design units, including 1 entities, in source file Q6.vhd
+    Info (12022): Found design unit 1: Q6-Behavior
+    Info (12023): Found entity 1: Q6
 Info (12127): Elaborating entity "ex1" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at ex1.vhd(10): used implicit default value for signal "Q1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at ex1.vhd(11): used implicit default value for signal "Q2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
@@ -262,9 +277,9 @@ Info (21057): Implemented 11 device resources after synthesis - the final resour
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 6 output pins
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 357 megabytes
-    Info: Processing ended: Wed Apr 26 16:47:06 2017
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 366 megabytes
+    Info: Processing ended: Wed Apr 26 17:24:48 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

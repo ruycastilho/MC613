@@ -11,7 +11,7 @@ END Q1;
 
 ARCHITECTURE Behavior OF Q1 IS
 	BEGIN
-	PROCESS (B)
+	PROCESS (A, B)
 	BEGIN
 		IF B = '0' THEN 
 			Q1 <= NOT A ; 

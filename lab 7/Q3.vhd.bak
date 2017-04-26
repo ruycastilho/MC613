@@ -17,14 +17,14 @@ ARCHITECTURE Behavior OF Q2 IS
 		VARIABLE jk: std_logic_vector (1 downto 0);
 	BEGIN
 		jk := B & A;
-		IF clk='1' THEN                        
-			CASE (jk) IS
+		IF clk='1' then                        
+			CASE (jk) is
 				WHEN "11" => temp := not (temp);
 				WHEN "10" => temp := '1';
 				WHEN "01" => temp := '0';
-				WHEN OTHERS => temp := temp; 
+				WHEN others => temp := temp; 
 			END CASE;
-		END IF; 
+		END if; 
 		Q2 <= temp;
 	END PROCESS;
 
