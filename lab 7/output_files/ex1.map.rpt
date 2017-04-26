@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ex1
-Wed Apr 26 17:51:06 2017
+Wed Apr 26 18:01:57 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,7 +10,15 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Logic Cells Representing Combinational Loops
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +44,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Apr 26 17:51:06 2017               ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 26 18:01:57 2017           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ex1                                             ;
 ; Top-level Entity Name              ; ex1                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 9                                               ;
+;     Total combinational functions  ; 7                                               ;
+;     Dedicated logic registers      ; 4                                               ;
+; Total registers                    ; 4                                               ;
+; Total pins                         ; 11                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -148,13 +156,131 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                     ;
++----------------------------------+-----------------+-----------------+-------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path              ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------+---------+
+; ex1.vhd                          ; yes             ; User VHDL File  ; /home/ec2015/ra177012/mc613/lab 7/ex1.vhd ;         ;
+; Q1.vhd                           ; yes             ; User VHDL File  ; /home/ec2015/ra177012/mc613/lab 7/Q1.vhd  ;         ;
+; Q2.vhd                           ; yes             ; User VHDL File  ; /home/ec2015/ra177012/mc613/lab 7/Q2.vhd  ;         ;
+; Q3.vhd                           ; yes             ; User VHDL File  ; /home/ec2015/ra177012/mc613/lab 7/Q3.vhd  ;         ;
+; Q4.vhd                           ; yes             ; User VHDL File  ; /home/ec2015/ra177012/mc613/lab 7/Q4.vhd  ;         ;
+; Q5.vhd                           ; yes             ; User VHDL File  ; /home/ec2015/ra177012/mc613/lab 7/Q5.vhd  ;         ;
+; Q6.vhd                           ; yes             ; User VHDL File  ; /home/ec2015/ra177012/mc613/lab 7/Q6.vhd  ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 9     ;
+;                                             ;       ;
+; Total combinational functions               ; 7     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 6     ;
+;     -- <=2 input functions                  ; 1     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 7     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 4     ;
+;     -- Dedicated logic registers            ; 4     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 11    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; A     ;
+; Maximum fan-out                             ; 6     ;
+; Total fan-out                               ; 35    ;
+; Average fan-out                             ; 1.59  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |ex1                       ; 7 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |ex1                ; work         ;
+;    |Q1:comp1|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ex1|Q1:comp1       ; work         ;
+;    |Q2:comp2|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ex1|Q2:comp2       ; work         ;
+;    |Q3:comp3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ex1|Q3:comp3       ; work         ;
+;    |Q4:comp4|              ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ex1|Q4:comp4       ; work         ;
+;    |Q5:comp5|              ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ex1|Q5:comp5       ; work         ;
+;    |Q6:comp6|              ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ex1|Q6:comp6       ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; Q2:comp2|temp                                      ; Q2:comp2|temp       ; yes                    ;
+; Q3:comp3|Q3                                        ; clk                 ; yes                    ;
+; Number of user-specified and inferred latches = 2  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; Q1:comp1|Q1                                            ;   ;
+; Number of logic cells representing combinational loops ; 1 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 4     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 1     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Q5:comp5|temp                          ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Apr 26 17:51:04 2017
+    Info: Processing started: Wed Apr 26 18:01:55 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex1d -c ex1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file ex1.vhd
@@ -178,11 +304,34 @@ Info (12021): Found 2 design units, including 1 entities, in source file Q5.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file Q6.vhd
     Info (12022): Found design unit 1: Q6-Behavior
     Info (12023): Found entity 1: Q6
-Error (10467): VHDL Component Configuration or Component Instantiation Statement error at ex1.vhd(23): component "q1" is used but not declared File: /home/ec2015/ra177012/mc613/lab 7/ex1.vhd Line: 23
-Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 356 megabytes
-    Error: Processing ended: Wed Apr 26 17:51:06 2017
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:01
+Info (12127): Elaborating entity "ex1" for the top level hierarchy
+Info (12128): Elaborating entity "Q1" for hierarchy "Q1:comp1"
+Warning (10631): VHDL Process Statement warning at Q1.vhd(14): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process
+Info (12128): Elaborating entity "Q2" for hierarchy "Q2:comp2"
+Warning (10631): VHDL Process Statement warning at Q2.vhd(15): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "temp" at Q2.vhd(20)
+Info (12128): Elaborating entity "Q3" for hierarchy "Q3:comp3"
+Warning (10631): VHDL Process Statement warning at Q3.vhd(14): inferring latch(es) for signal or variable "Q3", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Q3" at Q3.vhd(14)
+Info (12128): Elaborating entity "Q4" for hierarchy "Q4:comp4"
+Info (12128): Elaborating entity "Q5" for hierarchy "Q5:comp5"
+Info (12128): Elaborating entity "Q6" for hierarchy "Q6:comp6"
+Warning (13012): Latch Q2:comp2|temp has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal A
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "n"
+Info (21057): Implemented 21 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 10 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 356 megabytes
+    Info: Processing ended: Wed Apr 26 18:01:57 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

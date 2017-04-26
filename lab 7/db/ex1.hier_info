@@ -1,14 +1,67 @@
 |ex1
-m => ~NO_FANOUT~
+m => q5:comp5.m
 n => ~NO_FANOUT~
-A => ~NO_FANOUT~
-B => ~NO_FANOUT~
-clk => ~NO_FANOUT~
+A => q1:comp1.A
+A => q2:comp2.A
+A => q3:comp3.A
+A => q4:comp4.A
+A => q5:comp5.A
+B => q1:comp1.B
+B => q2:comp2.B
+B => q5:comp5.B
+B => q6:comp6.B
+clk => q2:comp2.clk
+clk => q3:comp3.clk
+clk => q4:comp4.clk
+clk => q5:comp5.clk
+clk => q6:comp6.clk
+oQ1 <= q1:comp1.Q1
+oQ2 <= q2:comp2.Q2
+oQ3 <= q3:comp3.Q3
+oQ4 <= q4:comp4.Q4
+oQ5 <= q5:comp5.Q5
+oQ6 <= q6:comp6.Q6
+
+
+|ex1|Q1:comp1
+A => Mux0.IN4
+B => Mux0.IN5
 Q1 <= Q1.DB_MAX_OUTPUT_PORT_TYPE
-Q2 <= Q2.DB_MAX_OUTPUT_PORT_TYPE
-Q3 <= Q3.DB_MAX_OUTPUT_PORT_TYPE
-Q4 <= Q4.DB_MAX_OUTPUT_PORT_TYPE
-Q5 <= Q5.DB_MAX_OUTPUT_PORT_TYPE
-Q6 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex1|Q2:comp2
+A => Mux0.IN4
+A => Mux1.IN4
+B => Mux0.IN5
+B => Mux1.IN5
+clk => temp.IN1
+Q2 <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex1|Q3:comp3
+A => Q3$latch.DATAIN
+clk => Q3$latch.LATCH_ENABLE
+Q3 <= Q3$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex1|Q4:comp4
+A => Q4~reg0.DATAIN
+clk => Q4~reg0.CLK
+Q4 <= Q4~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex1|Q5:comp5
+A => temp.IN1
+B => temp.IN1
+m => temp.PRESET
+clk => temp.CLK
+Q5 <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex1|Q6:comp6
+B => temp.OUTPUTSELECT
+clk => Q6~reg0.CLK
+clk => temp.CLK
+Q6 <= Q6~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

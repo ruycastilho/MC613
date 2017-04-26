@@ -20,16 +20,16 @@ END ex1;
 ARCHITECTURE Structure OF ex1 IS
 	BEGIN
 
-	q1: Q1 PORT MAP (A, B, oQ1);
+	comp1: Q1 PORT MAP (A, B, oQ1);
 	
-	q2: Q2 PORT MAP (A, B, clk, oQ2);
+	comp2: Q2 PORT MAP (A, B, clk, oQ2);
 	
-	q3: Q3 PORT MAP (A, clk, oQ3);
+	comp3: Q3 PORT MAP (A, clk, oQ3);
 	
-	q4: Q4 PORT MAP (A, clk, oQ4);
+	comp4: Q4 PORT MAP (A, clk, oQ4);
 	
-	q5: Q5 PORT MAP (A, B, m, clk, oQ5);
+	comp5: Q5 PORT MAP (A, B, m, clk, oQ5);
 	
-	q6: Q6 PORT MAP (B, clk, oQ6);
+	comp6: Q6 PORT MAP (B, clk, oQ6);
 				
 END Structure ;

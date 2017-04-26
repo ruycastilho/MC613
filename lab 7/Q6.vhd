@@ -11,15 +11,14 @@ END Q6;
 
 ARCHITECTURE Behavior OF Q6 IS
 	BEGIN
-	PROCESS (clk)
-		VARIABLE temp: STD_LOGIC := '0';
+	PROCESS
+			VARIABLE temp: STD_LOGIC := '0';
 	BEGIN
 		WAIT UNTIL clk'EVENT AND clk = '1' ;
 			IF B = '1' THEN
-				temp := NOT temp;
+				temp := (NOT temp);
 		END IF;
 		Q6 <= temp;
 	END PROCESS;
-
 				
 END Behavior ;
