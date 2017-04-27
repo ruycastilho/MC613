@@ -1,0 +1,260 @@
+Simulator report for ex1
+Thu Apr 27 19:08:27 2017
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 75.0 ns      ;
+; Simulation Netlist Size     ; 67 nodes     ;
+; Simulation Coverage         ;      51.52 % ;
+; Total Number of Transitions ; 15240        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                    ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                  ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                               ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                     ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                      ;               ;
+; Vector input source                                                                        ; /home/ec2015/ra177012/mc613/lab 7/Waveform_enunciado.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                       ; On            ;
+; Check outputs                                                                              ; Off                                                      ; Off           ;
+; Report simulation coverage                                                                 ; On                                                       ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                       ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                       ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                       ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                      ; Off           ;
+; Detect glitches                                                                            ; Off                                                      ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                      ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                      ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                      ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                      ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                       ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                               ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                      ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                      ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                     ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 32-bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      51.52 % ;
+; Total nodes checked                                 ; 67           ;
+; Total output ports checked                          ; 66           ;
+; Total output ports with complete 1/0-value coverage ; 34           ;
+; Total output ports with no 1/0-value coverage       ; 30           ;
+; Total output ports with no 1-value coverage         ; 31           ;
+; Total output ports with no 0-value coverage         ; 31           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                ;
++--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+
+; Node Name                                                          ; Output Port Name                                                   ; Output Port Type ;
++--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+
+; |ex1|A                                                             ; |ex1|A                                                             ; out              ;
+; |ex1|B                                                             ; |ex1|B                                                             ; out              ;
+; |ex1|oQ1                                                           ; |ex1|oQ1                                                           ; pin_out          ;
+; |ex1|Q6:comp6|temp~0                                               ; |ex1|Q6:comp6|temp~0                                               ; out              ;
+; |ex1|Q5:comp5|temp~0                                               ; |ex1|Q5:comp5|temp~0                                               ; out0             ;
+; |ex1|Q5:comp5|temp~2                                               ; |ex1|Q5:comp5|temp~2                                               ; out0             ;
+; |ex1|Q1:comp1|temp~0                                               ; |ex1|Q1:comp1|temp~0                                               ; out0             ;
+; |ex1|Q1:comp1|temp~1                                               ; |ex1|Q1:comp1|temp~1                                               ; out0             ;
+; |ex1|Q1:comp1|temp~2                                               ; |ex1|Q1:comp1|temp~2                                               ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~0              ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~0              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~1              ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~1              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~3              ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~3              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~6              ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~6              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~7              ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~7              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~8              ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~8              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|result_node[0]~0 ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|result_node[0]~0 ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~9              ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~9              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~11             ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~11             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~14             ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~14             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~15             ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~15             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~16             ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~16             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|result_node[0]~1 ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|result_node[0]~1 ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~1              ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~1              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~3              ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~3              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~6              ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~6              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~7              ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~7              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~8              ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~8              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~9              ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~9              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~11             ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~11             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~14             ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~14             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~15             ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~15             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~16             ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~16             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|result_node[0]~1 ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|result_node[0]~1 ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|result_node[0]   ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|result_node[0]   ; out0             ;
++--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                   ;
++--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+
+; Node Name                                                          ; Output Port Name                                                   ; Output Port Type ;
++--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+
+; |ex1|m                                                             ; |ex1|m                                                             ; out              ;
+; |ex1|clk                                                           ; |ex1|clk                                                           ; out              ;
+; |ex1|oQ2                                                           ; |ex1|oQ2                                                           ; pin_out          ;
+; |ex1|oQ3                                                           ; |ex1|oQ3                                                           ; pin_out          ;
+; |ex1|oQ4                                                           ; |ex1|oQ4                                                           ; pin_out          ;
+; |ex1|oQ5                                                           ; |ex1|oQ5                                                           ; pin_out          ;
+; |ex1|oQ6                                                           ; |ex1|oQ6                                                           ; pin_out          ;
+; |ex1|Q6:comp6|Q6                                                   ; |ex1|Q6:comp6|Q6                                                   ; regout           ;
+; |ex1|Q6:comp6|temp                                                 ; |ex1|Q6:comp6|temp                                                 ; regout           ;
+; |ex1|Q5:comp5|temp                                                 ; |ex1|Q5:comp5|temp                                                 ; regout           ;
+; |ex1|Q5:comp5|temp~1                                               ; |ex1|Q5:comp5|temp~1                                               ; out0             ;
+; |ex1|Q4:comp4|Q4                                                   ; |ex1|Q4:comp4|Q4                                                   ; regout           ;
+; |ex1|Q3:comp3|Q3                                                   ; |ex1|Q3:comp3|Q3                                                   ; out              ;
+; |ex1|Q2:comp2|temp                                                 ; |ex1|Q2:comp2|temp                                                 ; out              ;
+; |ex1|Q2:comp2|temp~1                                               ; |ex1|Q2:comp2|temp~1                                               ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~2              ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~2              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~4              ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~4              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~5              ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~5              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~10             ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~10             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~12             ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~12             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~13             ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~13             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~17             ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~17             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|result_node[0]   ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|result_node[0]   ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~0              ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~0              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~2              ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~2              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~4              ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~4              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~5              ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~5              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|result_node[0]~0 ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|result_node[0]~0 ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~10             ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~10             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~12             ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~12             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~13             ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~13             ; out0             ;
++--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                   ;
++--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+
+; Node Name                                                          ; Output Port Name                                                   ; Output Port Type ;
++--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+
+; |ex1|m                                                             ; |ex1|m                                                             ; out              ;
+; |ex1|clk                                                           ; |ex1|clk                                                           ; out              ;
+; |ex1|oQ2                                                           ; |ex1|oQ2                                                           ; pin_out          ;
+; |ex1|oQ3                                                           ; |ex1|oQ3                                                           ; pin_out          ;
+; |ex1|oQ4                                                           ; |ex1|oQ4                                                           ; pin_out          ;
+; |ex1|oQ5                                                           ; |ex1|oQ5                                                           ; pin_out          ;
+; |ex1|oQ6                                                           ; |ex1|oQ6                                                           ; pin_out          ;
+; |ex1|Q6:comp6|Q6                                                   ; |ex1|Q6:comp6|Q6                                                   ; regout           ;
+; |ex1|Q6:comp6|temp                                                 ; |ex1|Q6:comp6|temp                                                 ; regout           ;
+; |ex1|Q5:comp5|temp                                                 ; |ex1|Q5:comp5|temp                                                 ; regout           ;
+; |ex1|Q5:comp5|temp~1                                               ; |ex1|Q5:comp5|temp~1                                               ; out0             ;
+; |ex1|Q4:comp4|Q4                                                   ; |ex1|Q4:comp4|Q4                                                   ; regout           ;
+; |ex1|Q3:comp3|Q3                                                   ; |ex1|Q3:comp3|Q3                                                   ; out              ;
+; |ex1|Q2:comp2|temp                                                 ; |ex1|Q2:comp2|temp                                                 ; out              ;
+; |ex1|Q2:comp2|temp~1                                               ; |ex1|Q2:comp2|temp~1                                               ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~2              ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~2              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~4              ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~4              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~5              ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~5              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~10             ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~10             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~12             ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~12             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~13             ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~13             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~17             ; |ex1|Q2:comp2|lpm_mux:Mux1|mux_umc:auto_generated|_~17             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~0              ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~0              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~2              ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~2              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~4              ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~4              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~5              ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~5              ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|result_node[0]~0 ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|result_node[0]~0 ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~10             ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~10             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~12             ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~12             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~13             ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~13             ; out0             ;
+; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~17             ; |ex1|Q2:comp2|lpm_mux:Mux0|mux_umc:auto_generated|_~17             ; out0             ;
++--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Apr 27 19:08:27 2017
+Info: Command: quartus_sim --simulation_results_format=VWF ex1d -c ex1
+Info (324025): Using vector source file "/home/ec2015/ra177012/mc613/lab 7/Waveform_enunciado.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Error (324000): Zero-time oscillation in node "|ex1|Q1:comp1|temp~0" at time 75.0 ns. Check the design or vector source file for combinational loop.
+Error (324000): Zero-time oscillation in node "|ex1|Q1:comp1|temp~2" at time 75.0 ns. Check the design or vector source file for combinational loop.
+Error (324000): Zero-time oscillation in node "|ex1|oQ1" at time 75.0 ns. Check the design or vector source file for combinational loop.
+Info (328053): Simulation coverage is      51.52 %
+Info (328052): Number of transitions in simulation is 15240
+Info (324045): Vector file ex1.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Error: Quartus II 32-bit Simulator was unsuccessful. 3 errors, 0 warnings
+    Error: Peak virtual memory: 267 megabytes
+    Error: Processing ended: Thu Apr 27 19:08:27 2017
+    Error: Elapsed time: 00:00:00
+    Error: Total CPU time (on all processors): 00:00:00
+
+

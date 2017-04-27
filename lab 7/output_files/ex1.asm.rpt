@@ -1,5 +1,5 @@
 Assembler report for ex1
-Wed Apr 26 18:02:05 2017
+Thu Apr 27 19:08:16 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Apr 26 18:02:05 2017 ;
+; Assembler Status      ; Successful - Thu Apr 27 19:08:16 2017 ;
 ; Revision Name         ; ex1                                   ;
 ; Top-level Entity Name ; ex1                                   ;
 ; Family                ; Cyclone II                            ;
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Apr 26 18:02:03 2017
+    Info: Processing started: Thu Apr 27 19:08:15 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ex1d -c ex1
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 336 megabytes
-    Info: Processing ended: Wed Apr 26 18:02:05 2017
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Thu Apr 27 19:08:16 2017
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ex1
-Wed Apr 26 18:01:57 2017
+Thu Apr 27 19:08:10 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,7 +44,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 26 18:01:57 2017           ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 27 19:08:10 2017           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ex1                                             ;
 ; Top-level Entity Name              ; ex1                                             ;
@@ -280,7 +280,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Apr 26 18:01:55 2017
+    Info: Processing started: Thu Apr 27 19:08:08 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex1d -c ex1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file ex1.vhd
@@ -306,7 +306,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file Q6.vhd
     Info (12023): Found entity 1: Q6
 Info (12127): Elaborating entity "ex1" for the top level hierarchy
 Info (12128): Elaborating entity "Q1" for hierarchy "Q1:comp1"
-Warning (10631): VHDL Process Statement warning at Q1.vhd(14): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process
 Info (12128): Elaborating entity "Q2" for hierarchy "Q2:comp2"
 Warning (10631): VHDL Process Statement warning at Q2.vhd(15): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process
 Info (10041): Inferred latch for "temp" at Q2.vhd(20)
@@ -328,10 +327,10 @@ Info (21057): Implemented 21 device resources after synthesis - the final resour
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 6 output pins
     Info (21061): Implemented 10 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 356 megabytes
-    Info: Processing ended: Wed Apr 26 18:01:57 2017
+    Info: Processing ended: Thu Apr 27 19:08:10 2017
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

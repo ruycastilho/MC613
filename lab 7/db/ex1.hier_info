@@ -24,9 +24,9 @@ oQ6 <= q6:comp6.Q6
 
 
 |ex1|Q1:comp1
-A => Mux0.IN4
-B => Mux0.IN5
-Q1 <= Q1.DB_MAX_OUTPUT_PORT_TYPE
+A => temp~0.IN0
+B => temp~1.IN0
+Q1 <= Q1~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ex1|Q2:comp2
@@ -34,7 +34,7 @@ A => Mux0.IN4
 A => Mux1.IN4
 B => Mux0.IN5
 B => Mux1.IN5
-clk => temp.IN1
+clk => temp~1.IN1
 Q2 <= temp.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -51,15 +51,15 @@ Q4 <= Q4~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ex1|Q5:comp5
-A => temp.IN1
-B => temp.IN1
+A => temp~0.IN1
+B => temp~1.IN1
 m => temp.PRESET
 clk => temp.CLK
 Q5 <= temp.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ex1|Q6:comp6
-B => temp.OUTPUTSELECT
+B => temp~0.OUTPUTSELECT
 clk => Q6~reg0.CLK
 clk => temp.CLK
 Q6 <= Q6~reg0.DB_MAX_OUTPUT_PORT_TYPE

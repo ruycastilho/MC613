@@ -13,17 +13,9 @@ ARCHITECTURE Behavior OF Q1 IS
 	BEGIN
 	PROCESS (A, B) 
 		VARIABLE temp: std_logic;
-		VARIABLE jk: std_logic_vector (1 downto 0);
 	BEGIN
-		jk :=  NOT A & NOT B;
-                  
-		CASE (jk) IS
-			WHEN "11" => temp := not (temp);
-			WHEN "10" => temp := '1';
-			WHEN "01" => temp := '0';
-			WHEN OTHERS => temp := temp; 
-		END CASE;
-
+      temp := (NOT(A) AND NOT(temp)) OR (B and temp);
+		
 		Q1 <= temp;
 	END PROCESS;
 				
