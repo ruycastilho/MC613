@@ -1,0 +1,45 @@
+|Shifter
+ParIn[0] => Mux7.IN0
+ParIn[1] => Mux6.IN0
+ParIn[2] => Mux5.IN0
+ParIn[3] => Mux4.IN0
+ParIn[4] => Mux3.IN0
+ParIn[5] => Mux2.IN0
+ParIn[6] => Mux1.IN0
+ParIn[7] => Mux0.IN0
+clk => ParOut[0]~reg0.CLK
+clk => ParOut[1]~reg0.CLK
+clk => ParOut[2]~reg0.CLK
+clk => ParOut[3]~reg0.CLK
+clk => ParOut[4]~reg0.CLK
+clk => ParOut[5]~reg0.CLK
+clk => ParOut[6]~reg0.CLK
+clk => ParOut[7]~reg0.CLK
+SerIn => Mux0.IN1
+SerIn => Mux7.IN1
+modo[0] => Mux0.IN3
+modo[0] => Mux1.IN2
+modo[0] => Mux2.IN2
+modo[0] => Mux3.IN2
+modo[0] => Mux4.IN2
+modo[0] => Mux5.IN2
+modo[0] => Mux6.IN2
+modo[0] => Mux7.IN3
+modo[1] => Mux0.IN2
+modo[1] => Mux1.IN1
+modo[1] => Mux2.IN1
+modo[1] => Mux3.IN1
+modo[1] => Mux4.IN1
+modo[1] => Mux5.IN1
+modo[1] => Mux6.IN1
+modo[1] => Mux7.IN2
+ParOut[0] << ParOut[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ParOut[1] << ParOut[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ParOut[2] << ParOut[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ParOut[3] << ParOut[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ParOut[4] << ParOut[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ParOut[5] << ParOut[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ParOut[6] << ParOut[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ParOut[7] << ParOut[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
