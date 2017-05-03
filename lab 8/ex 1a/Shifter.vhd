@@ -22,20 +22,20 @@ ARCHITECTURE Behavior OF Shifter IS
 					WHEN "10" => 
 						shiftright:
 							FOR i IN 0 TO N-2 LOOP
-								ParOut(i+1) <= ParOut(i) ;
-								
-							END LOOP;
-							
-						ParOut(0) <= SerIn;
-						
-					WHEN "01" => 
-						shiftleft:
-							FOR i IN 0 TO N-2 LOOP
 								ParOut(i) <= ParOut(i+1) ;
 								
 							END LOOP;
 							
 						ParOut(N-1) <= SerIn;
+						
+					WHEN "01" => 
+						shiftleft:
+							FOR i IN 0 TO N-2 LOOP
+								ParOut(i+1) <= ParOut(i) ;
+								
+							END LOOP;
+							
+						ParOut(0) <= SerIn;
 						
 					WHEN OTHERS =>
 						ParOut <= ParOut;

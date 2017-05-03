@@ -1,0 +1,20 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all ;
+
+ENTITY Shifter IS
+	GENERIC ( N : INTEGER := 8 ) ;
+	PORT ( 	ParIn:	IN 		STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+				clk:	 	IN     	STD_LOGIC;
+				SerIn: 	IN       STD_LOGIC;
+				modo: 	IN 		STD_LOGIC_VECTOR(1 DOWNTO 0);
+				ParOut: 	BUFFER 	STD_LOGIC_VECTOR(N-1 DOWNTO 0) ) ;
+END Shifter ;
+
+ARCHITECTURE Behavior OF Shifter IS
+	BEGIN
+		PROCESS
+		BEGIN
+			WAIT UNTIL clk'EVENT AND clk = '1' ;
+
+		END PROCESS ;
+END Behavior ;

@@ -1,0 +1,20 @@
+MC13 Lab 8
+Ruy Castilho Barrichelo RA: 177012
+
+Observacao
+
+O funcionamento com o push button pareceu menos
+responsivo, gerando um atraso ocasionalmente.
+No entanto, só é necessário pressioná-lo uma 
+vez a cada ciclo.
+
+Já com a chave, o funcionamento foi mais
+responsivo, pois pareceu não haver atraso entre 
+a ativação do clock e a mudança na saída. Contudo,
+é necessário colocar a chave para baixo e para 
+cima novamente para um novo ciclo, logo, mais 
+movimento do que o push button.
+Ainda, foi notado um comportamento estranho: 
+ocasionalmente o funcionamento se mostrava errado 
+mediante ativação do clock, por exemplo, alguns 
+bits a mais eram shiftados em um único ciclo.
