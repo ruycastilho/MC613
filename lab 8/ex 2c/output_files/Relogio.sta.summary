@@ -3,16 +3,16 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'CLOCK_50'
-Slack : -3.380
-TNS   : -57.187
+Slack : -3.379
+TNS   : -59.264
 
 Type  : Slow Model Setup 'Divisor50Clk:divisor_clk|clk_temp'
-Slack : -1.341
-TNS   : -32.126
+Slack : -1.438
+TNS   : -34.936
 
 Type  : Slow Model Hold 'CLOCK_50'
-Slack : -2.700
-TNS   : -2.700
+Slack : -2.692
+TNS   : -2.692
 
 Type  : Slow Model Hold 'Divisor50Clk:divisor_clk|clk_temp'
 Slack : 0.445
@@ -27,16 +27,16 @@ Slack : -0.611
 TNS   : -67.210
 
 Type  : Fast Model Setup 'CLOCK_50'
-Slack : -0.836
-TNS   : -9.017
+Slack : -0.835
+TNS   : -9.816
 
 Type  : Fast Model Setup 'Divisor50Clk:divisor_clk|clk_temp'
-Slack : 0.117
+Slack : 0.068
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CLOCK_50'
-Slack : -1.728
-TNS   : -1.728
+Slack : -1.721
+TNS   : -1.721
 
 Type  : Fast Model Hold 'Divisor50Clk:divisor_clk|clk_temp'
 Slack : 0.215

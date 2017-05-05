@@ -206,7 +206,9 @@ BEGIN
 				ELSE
 			
 					load_enable <= (OTHERS => '0');
-
+					loop2: FOR i IN 1 TO 5 LOOP
+							cont_enable(i) <= '0';
+					END LOOP;
 					
 					IF (SW(0) = '1') THEN
 					

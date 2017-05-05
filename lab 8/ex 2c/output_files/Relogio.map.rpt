@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Relogio
-Fri May  5 18:51:43 2017
+Fri May  5 19:01:40 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -45,13 +45,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May  5 18:51:43 2017           ;
+; Analysis & Synthesis Status        ; Successful - Fri May  5 19:01:40 2017           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Relogio                                         ;
 ; Top-level Entity Name              ; Relogio                                         ;
 ; Family                             ; Cyclone II                                      ;
 ; Total logic elements               ; 157                                             ;
-;     Total combinational functions  ; 156                                             ;
+;     Total combinational functions  ; 157                                             ;
 ;     Dedicated logic registers      ; 81                                              ;
 ; Total registers                    ; 81                                              ;
 ; Total pins                         ; 61                                              ;
@@ -177,14 +177,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------------------------------+
 ; Estimated Total logic elements              ; 157                               ;
 ;                                             ;                                   ;
-; Total combinational functions               ; 156                               ;
+; Total combinational functions               ; 157                               ;
 ; Logic element usage by number of LUT inputs ;                                   ;
-;     -- 4 input functions                    ; 71                                ;
-;     -- 3 input functions                    ; 35                                ;
-;     -- <=2 input functions                  ; 50                                ;
+;     -- 4 input functions                    ; 68                                ;
+;     -- 3 input functions                    ; 38                                ;
+;     -- <=2 input functions                  ; 51                                ;
 ;                                             ;                                   ;
 ; Logic elements by mode                      ;                                   ;
-;     -- normal mode                          ; 132                               ;
+;     -- normal mode                          ; 133                               ;
 ;     -- arithmetic mode                      ; 24                                ;
 ;                                             ;                                   ;
 ; Total registers                             ; 81                                ;
@@ -195,8 +195,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0                                 ;
 ; Maximum fan-out node                        ; Divisor50Clk:divisor_clk|clk_temp ;
 ; Maximum fan-out                             ; 56                                ;
-; Total fan-out                               ; 707                               ;
-; Average fan-out                             ; 2.37                              ;
+; Total fan-out                               ; 705                               ;
+; Average fan-out                             ; 2.36                              ;
 +---------------------------------------------+-----------------------------------+
 
 
@@ -205,11 +205,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
-; |Relogio                        ; 156 (35)          ; 81 (31)      ; 0           ; 0            ; 0       ; 0         ; 61   ; 0            ; |Relogio                            ; work         ;
+; |Relogio                        ; 157 (35)          ; 81 (31)      ; 0           ; 0            ; 0       ; 0         ; 61   ; 0            ; |Relogio                            ; work         ;
 ;    |ContadorMod10:dezena_hora|  ; 8 (8)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Relogio|ContadorMod10:dezena_hora  ; work         ;
 ;    |ContadorMod10:dezena_min|   ; 8 (8)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Relogio|ContadorMod10:dezena_min   ; work         ;
 ;    |ContadorMod10:dezena_seg|   ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Relogio|ContadorMod10:dezena_seg   ; work         ;
-;    |ContadorMod10:unidade_hora| ; 8 (8)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Relogio|ContadorMod10:unidade_hora ; work         ;
+;    |ContadorMod10:unidade_hora| ; 9 (9)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Relogio|ContadorMod10:unidade_hora ; work         ;
 ;    |ContadorMod10:unidade_min|  ; 9 (9)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Relogio|ContadorMod10:unidade_min  ; work         ;
 ;    |ContadorMod10:unidade_seg|  ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Relogio|ContadorMod10:unidade_seg  ; work         ;
 ;    |Divisor50Clk:divisor_clk|   ; 47 (47)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Relogio|Divisor50Clk:divisor_clk   ; work         ;
@@ -242,7 +242,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 30    ;
+; Number of registers using Clock Enable       ; 28    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -254,11 +254,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Relogio|ContadorMod10:unidade_seg|Q[3]  ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Relogio|ContadorMod10:unidade_min|Q[3]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Relogio|load_enable[2]                  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Relogio|load_enable[2]                  ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Relogio|ContadorMod10:dezena_seg|Q[3]   ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Relogio|ContadorMod10:dezena_min|Q[3]   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Relogio|ContadorMod10:unidade_hora|Q[3] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Relogio|ContadorMod10:dezena_hora|Q[1]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Relogio|ContadorMod10:unidade_hora|Q[2] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Relogio|ContadorMod10:dezena_hora|Q[0]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 
 
@@ -295,7 +295,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri May  5 18:51:41 2017
+    Info: Processing started: Fri May  5 19:01:38 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex2c -c Relogio
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file display_7seg.vhd
@@ -346,13 +346,13 @@ Warning (21074): Design contains 6 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 223 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 220 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 46 output pins
-    Info (21061): Implemented 162 logic cells
+    Info (21061): Implemented 159 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 363 megabytes
-    Info: Processing ended: Fri May  5 18:51:43 2017
+    Info: Peak virtual memory: 373 megabytes
+    Info: Processing ended: Fri May  5 19:01:40 2017
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
