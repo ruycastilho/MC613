@@ -28,7 +28,8 @@ ARCHITECTURE Behavior OF Relogio IS
 	-- Counter parameters
 	SIGNAL load_value: STD_LOGIC_VECTOR(3 DOWNTO 0);
 	SIGNAL load_enable: STD_LOGIC_VECTOR(5 DOWNTO 0);
-	SIGNAL cont_enable: STD_LOGIC_VECTOR(4 DOWNTO 0);
+	SIGNAL load_enable_temp: STD_LOGIC_VECTOR(5 DOWNTO 0);
+	SIGNAL cont_enable: STD_LOGIC_VECTOR(5 DOWNTO 0);
 	
 	-- Clock
 	SIGNAL clock_1Hz: STD_LOGIC;
@@ -56,27 +57,27 @@ BEGIN
 	
 	unidade_seg: ContadorMod10
 				PORT MAP
-				('1', load_value, load_enable(0), clock_1Hz, unidade_seg_out);
+				(cont_enable(0), "0000", load_enable(0), clock_1Hz, unidade_seg_out);
 	
 	dezena_seg: ContadorMod10
 				PORT MAP
-				(cont_enable(0), load_value, load_enable(1), clock_1Hz, dezena_seg_out);
+				(cont_enable(1), "0000", load_enable(1), clock_1Hz, dezena_seg_out);
 	
 	unidade_min: ContadorMod10
 				PORT MAP
-				(cont_enable(1), load_value, load_enable(2), clock_1Hz, unidade_min_out);
+				(cont_enable(2), load_value, load_enable(2), clock_1Hz, unidade_min_out);
 	
 	dezena_min: ContadorMod10
 				PORT MAP
-				(cont_enable(2), load_value, load_enable(3), clock_1Hz, dezena_min_out);
+				(cont_enable(3), load_value, load_enable(3), clock_1Hz, dezena_min_out);
 	
 	unidade_hora: ContadorMod10
 				PORT MAP
-				(cont_enable(3), load_value, load_enable(4), clock_1Hz, unidade_hora_out);
+				(cont_enable(4), load_value, load_enable(4), clock_1Hz, unidade_hora_out);
 	
 	dezena_hora: ContadorMod10
 				PORT MAP
-				(cont_enable(4), load_value, load_enable(5), clock_1Hz, dezena_hora_out);
+				(cont_enable(5), load_value, load_enable(5), clock_1Hz, dezena_hora_out);
 	
 	display_0: display_7seg
 				PORT MAP
@@ -103,28 +104,113 @@ BEGIN
 		load_activation	<= KEY(0);
 		mode 					<= SW(9);
 		
+		WITH load_digit SELECT
+			load_enable_temp <= 	"000111" WHEN "00",
+										"001011" WHEN "01",
+										"010011" WHEN "10",
+										"100011" WHEN OTHERS;
+		
+		
 		
 	-- Logic
 	
 		PROCESS (clock_1Hz)
-			BEGIN
-		
-			-- Normal mode
-			IF (mode = '0') THEN
-		
-				IF ( unidade_seg_out = "1001" ) THEN
+			BEGIN			
+	
+			IF ( clock_1Hz'EVENT AND clock_1Hz = '1' ) THEN
+								
+				loop1: FOR i IN 0 TO 5 LOOP
+					cont_enable(i) <= '1';
+				
+				END LOOP;
+				
+				-- Normal mode
+				IF (mode = '0') THEN
+			
+					-- Unidade seg
+					IF ( unidade_seg_out = "1001" ) THEN
+						cont_enable(1) <= '1';
 					
+					
+					ELSE
+						cont_enable(1) <= '0';	
+					
+					END IF;
+		
+					-- Dezena seg	
+					IF ( dezena_seg_out = "1001" ) THEN
+						cont_enable(2) <= '1';
+					
+					
+					ELSE
+						cont_enable(2) <= '0';	
+					
+					END IF;
+					
+					-- Unidade min
+					IF ( unidade_min_out = "1001" ) THEN
+						cont_enable(3) <= '1';
+					
+					
+					ELSE
+						cont_enable(3) <= '0';	
+					
+					END IF;
+
+					-- Dezena min
+					IF ( dezena_min_out = "1001" ) THEN
+						cont_enable(4) <= '1';
+					
+					
+					ELSE
+						cont_enable(4) <= '0';	
+					
+					END IF;
+
+					-- Unidade hora
+					IF ( unidade_hora_out = "1001" ) THEN
+						cont_enable(5) <= '1';
+					
+					
+					ELSE
+						cont_enable(5) <= '0';	
+					
+					END IF;
+			
+					-- Display HH:MM
+					IF (display_mode = '1') THEN
+						display0_out <= unidade_min_out;
+						display1_out <= dezena_min_out;
+						display2_out <= unidade_hora_out;
+						display3_out <= dezena_hora_out;
+					
+					-- Display MM:SS
+					ELSE
+						display0_out <= unidade_seg_out;
+						display1_out <= dezena_seg_out;
+						display2_out <= unidade_min_out;
+						display3_out <= dezena_min_out;
+						
+					END IF;
+
+				-- Set mode
+				ELSE
+				
+					loop2: FOR i IN 0 TO 5 LOOP
+						cont_enable(i) <= '0';
+				
+					END LOOP;
+					
+					IF (load_activation = '1') THEN
+						load_enable <= load_enable_temp;
+				
+					END IF;
 				
 				
 				END IF;
-		
-		
-		
-			-- Set mode
-			--ELSE
 			
 			END IF;
-			
+	
 		END PROCESS;
 		
 END Behavior;
