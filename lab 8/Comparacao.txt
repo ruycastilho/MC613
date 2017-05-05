@@ -1,0 +1,8 @@
+MC613 Lab 8
+
+Ruy Castilho Barrichelo. RA: 177012
+
+Comparação:
+
+Pelo menos em 10min de espera, o atraso foi aproximadamente a 1s.
+Dessa forma, em 24h, o atraso deve ser de, aproximadamente, 2 minutos e meio.
