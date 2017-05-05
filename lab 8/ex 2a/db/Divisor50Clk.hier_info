@@ -1,0 +1,11 @@
+|Divisor50Clk
+clk_in => clk_temp.CLK
+clk_in => Count[0].CLK
+clk_in => Count[1].CLK
+clk_in => Count[2].CLK
+clk_in => Count[3].CLK
+clk_in => Count[4].CLK
+clk_in => Count[5].CLK
+clk_out <= clk_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

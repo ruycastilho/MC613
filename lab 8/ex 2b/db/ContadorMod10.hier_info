@@ -1,13 +1,13 @@
 |ContadorMod10
 Enable => ~NO_FANOUT~
-L[0] => Q.DATAB
-L[1] => Q.DATAB
-L[2] => Q.DATAB
-L[3] => Q.DATAB
-Load => Q.OUTPUTSELECT
-Load => Q.OUTPUTSELECT
-Load => Q.OUTPUTSELECT
-Load => Q.OUTPUTSELECT
+L[0] => Q~7.DATAB
+L[1] => Q~6.DATAB
+L[2] => Q~5.DATAB
+L[3] => Q~4.DATAB
+Load => Q~4.OUTPUTSELECT
+Load => Q~5.OUTPUTSELECT
+Load => Q~6.OUTPUTSELECT
+Load => Q~7.OUTPUTSELECT
 Clock => Q[0]~reg0.CLK
 Clock => Q[1]~reg0.CLK
 Clock => Q[2]~reg0.CLK
