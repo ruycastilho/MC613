@@ -41,18 +41,19 @@ SW[8] => display3_out.OUTPUTSELECT
 SW[8] => display3_out.OUTPUTSELECT
 SW[8] => display3_out.OUTPUTSELECT
 SW[8] => display3_out.OUTPUTSELECT
-SW[9] => cont_enable.OUTPUTSELECT
-SW[9] => cont_enable.OUTPUTSELECT
-SW[9] => cont_enable.OUTPUTSELECT
-SW[9] => cont_enable.OUTPUTSELECT
-SW[9] => cont_enable.OUTPUTSELECT
+SW[9] => load_enable.OUTPUTSELECT
+SW[9] => load_enable.OUTPUTSELECT
+SW[9] => load_enable.OUTPUTSELECT
+SW[9] => load_enable.OUTPUTSELECT
+SW[9] => load_enable.OUTPUTSELECT
+SW[9] => load_enable.OUTPUTSELECT
 SW[9] => cont_enable[0].DATAIN
-SW[9] => load_enable[2].ENA
-SW[9] => load_enable[1].ENA
-SW[9] => load_enable[0].ENA
-SW[9] => load_enable[3].ENA
-SW[9] => load_enable[4].ENA
-SW[9] => load_enable[5].ENA
+SW[9] => load_enable_temp[3].ENA
+SW[9] => load_enable_temp[2].ENA
+SW[9] => load_enable_temp[1].ENA
+SW[9] => load_enable_temp[0].ENA
+SW[9] => load_enable_temp[4].ENA
+SW[9] => load_enable_temp[5].ENA
 SW[9] => display3_out[0].ENA
 SW[9] => display3_out[1].ENA
 SW[9] => display3_out[2].ENA
@@ -69,6 +70,11 @@ SW[9] => display0_out[0].ENA
 SW[9] => display0_out[1].ENA
 SW[9] => display0_out[2].ENA
 SW[9] => display0_out[3].ENA
+SW[9] => cont_enable[1].ENA
+SW[9] => cont_enable[2].ENA
+SW[9] => cont_enable[3].ENA
+SW[9] => cont_enable[4].ENA
+SW[9] => cont_enable[5].ENA
 KEY[0] => load_enable.OUTPUTSELECT
 KEY[0] => load_enable.OUTPUTSELECT
 KEY[0] => load_enable.OUTPUTSELECT
@@ -158,7 +164,10 @@ clk_out <= clk_temp.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Relogio|ContadorMod10:unidade_seg
-Enable => ~NO_FANOUT~
+Enable => Q[0]~reg0.ENA
+Enable => Q[3]~reg0.ENA
+Enable => Q[2]~reg0.ENA
+Enable => Q[1]~reg0.ENA
 L[0] => Q.DATAB
 L[1] => Q.DATAB
 L[2] => Q.DATAB
@@ -178,7 +187,10 @@ Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Relogio|ContadorMod10:dezena_seg
-Enable => ~NO_FANOUT~
+Enable => Q[0]~reg0.ENA
+Enable => Q[3]~reg0.ENA
+Enable => Q[2]~reg0.ENA
+Enable => Q[1]~reg0.ENA
 L[0] => Q.DATAB
 L[1] => Q.DATAB
 L[2] => Q.DATAB
@@ -198,7 +210,10 @@ Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Relogio|ContadorMod10:unidade_min
-Enable => ~NO_FANOUT~
+Enable => Q[0]~reg0.ENA
+Enable => Q[3]~reg0.ENA
+Enable => Q[2]~reg0.ENA
+Enable => Q[1]~reg0.ENA
 L[0] => Q.DATAB
 L[1] => Q.DATAB
 L[2] => Q.DATAB
@@ -218,7 +233,10 @@ Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Relogio|ContadorMod10:dezena_min
-Enable => ~NO_FANOUT~
+Enable => Q[0]~reg0.ENA
+Enable => Q[3]~reg0.ENA
+Enable => Q[2]~reg0.ENA
+Enable => Q[1]~reg0.ENA
 L[0] => Q.DATAB
 L[1] => Q.DATAB
 L[2] => Q.DATAB
@@ -238,7 +256,10 @@ Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Relogio|ContadorMod10:unidade_hora
-Enable => ~NO_FANOUT~
+Enable => Q[0]~reg0.ENA
+Enable => Q[3]~reg0.ENA
+Enable => Q[2]~reg0.ENA
+Enable => Q[1]~reg0.ENA
 L[0] => Q.DATAB
 L[1] => Q.DATAB
 L[2] => Q.DATAB
@@ -258,7 +279,10 @@ Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Relogio|ContadorMod10:dezena_hora
-Enable => ~NO_FANOUT~
+Enable => Q[0]~reg0.ENA
+Enable => Q[3]~reg0.ENA
+Enable => Q[2]~reg0.ENA
+Enable => Q[1]~reg0.ENA
 L[0] => Q.DATAB
 L[1] => Q.DATAB
 L[2] => Q.DATAB

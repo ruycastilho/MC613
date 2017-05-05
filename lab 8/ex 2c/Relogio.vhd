@@ -29,7 +29,7 @@ ARCHITECTURE Behavior OF Relogio IS
 	SIGNAL load_value: STD_LOGIC_VECTOR(3 DOWNTO 0);
 	SIGNAL load_enable: STD_LOGIC_VECTOR(5 DOWNTO 0);
 	SIGNAL load_enable_temp: STD_LOGIC_VECTOR(5 DOWNTO 0);
-	SIGNAL cont_enable: STD_LOGIC_VECTOR(5 DOWNTO 0);
+	SIGNAL cont_enable: STD_LOGIC_VECTOR(5 DOWNTO 0) := "000001";
 	
 	-- Clock
 	SIGNAL clock_1Hz: STD_LOGIC;
@@ -104,13 +104,6 @@ BEGIN
 		load_activation	<= KEY(0);
 		mode 					<= SW(9);
 		
-		WITH load_digit SELECT
-			load_enable_temp <= 	"000111" WHEN "00",
-										"001011" WHEN "01",
-										"010011" WHEN "10",
-										"100011" WHEN OTHERS;
-		
-		
 		
 	-- Logic
 	
@@ -118,47 +111,44 @@ BEGIN
 			BEGIN			
 	
 			IF ( clock_1Hz'EVENT AND clock_1Hz = '1' ) THEN
-								
-				loop1: FOR i IN 0 TO 5 LOOP
-					cont_enable(i) <= '1';
-				
-				END LOOP;
-				
+									
 				-- Normal mode
 				IF (mode = '0') THEN
-			
-					-- Unidade seg
-					IF ( unidade_seg_out = "1001" ) THEN
-						cont_enable(1) <= '1';
+				
+					cont_enable(0) <= '1';
+					loop1: FOR i IN 1 TO 5 LOOP
+							cont_enable(i) <= '0';
+					END LOOP;
+
+					load_enable <= (OTHERS => '0');
+
+					IF (dezena_hora_out = "0010" ) THEN
 					
-					
-					ELSE
-						cont_enable(1) <= '0';	
-					
-					END IF;
-		
-					-- Dezena seg	
-					IF ( dezena_seg_out = "1001" ) THEN
-						cont_enable(2) <= '1';
-					
-					
-					ELSE
-						cont_enable(2) <= '0';	
-					
-					END IF;
-					
-					-- Unidade min
-					IF ( unidade_min_out = "1001" ) THEN
-						cont_enable(3) <= '1';
-					
+						-- Unidade hora
+						IF ( unidade_hora_out = "0011" ) THEN
+							-- dar set em 3 pra 0 e de 2 pra 0
+						
+						ELSE
+							cont_enable(5) <= '0';	
+						
+						END IF;
+						
 					
 					ELSE
-						cont_enable(3) <= '0';	
+					
+						-- Unidade hora
+						IF ( unidade_hora_out = "1000" ) THEN
+							cont_enable(5) <= '1';
+						
+						ELSE
+							cont_enable(5) <= '0';	
+						
+						END IF;
 					
 					END IF;
 
 					-- Dezena min
-					IF ( dezena_min_out = "1001" ) THEN
+					IF ( dezena_min_out = "0101" ) THEN
 						cont_enable(4) <= '1';
 					
 					
@@ -167,16 +157,36 @@ BEGIN
 					
 					END IF;
 
-					-- Unidade hora
-					IF ( unidade_hora_out = "1001" ) THEN
-						cont_enable(5) <= '1';
+					-- Unidade min
+					IF ( unidade_min_out = "1000" ) THEN
+						cont_enable(3) <= '1';
 					
 					
 					ELSE
-						cont_enable(5) <= '0';	
+						cont_enable(3) <= '0';	
 					
 					END IF;
-			
+
+					-- Dezena seg	
+					IF ( dezena_seg_out = "0101" ) THEN
+						cont_enable(2) <= '1';
+					
+					
+					ELSE
+						cont_enable(2) <= '0';	
+					
+					END IF;
+
+					-- Unidade seg
+					IF ( unidade_seg_out = "1000" ) THEN
+						cont_enable(1) <= '1';
+					
+					
+					ELSE
+						cont_enable(1) <= '0';	
+					
+					END IF;
+					
 					-- Display HH:MM
 					IF (display_mode = '1') THEN
 						display0_out <= unidade_min_out;
@@ -195,15 +205,20 @@ BEGIN
 
 				-- Set mode
 				ELSE
-				
-					loop2: FOR i IN 0 TO 5 LOOP
-						cont_enable(i) <= '0';
-				
-					END LOOP;
+					cont_enable(0) <= '0';
+					
+							
+					case_load: CASE (load_digit) IS
+						WHEN "00" => load_enable_temp <= "000111";
+						WHEN "01" => load_enable_temp <= "001011";
+						WHEN "10" => load_enable_temp <= "010011";
+						WHEN "11" => load_enable_temp <= "100011";
+		
+					END CASE;
 					
 					IF (load_activation = '1') THEN
 						load_enable <= load_enable_temp;
-				
+					
 					END IF;
 				
 				

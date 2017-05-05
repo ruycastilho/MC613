@@ -1,5 +1,5 @@
 Simulator report for ContadorMod10
-Fri May  5 14:57:40 2017
+Fri May  5 17:07:49 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -177,7 +177,7 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri May  5 14:57:40 2017
+    Info: Processing started: Fri May  5 17:07:49 2017
 Info: Command: quartus_sim --simulation_results_format=VWF ex2b -c ContadorMod10
 Info (324025): Using vector source file "/home/ec2015/ra177012/Documents/MC613/lab 8/ex 2b/Waveform.vwf"
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
@@ -187,9 +187,9 @@ Info (328053): Simulation coverage is      82.14 %
 Info (328052): Number of transitions in simulation is 739
 Info (324045): Vector file ContadorMod10.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II 32-bit Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 277 megabytes
-    Info: Processing ended: Fri May  5 14:57:40 2017
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 265 megabytes
+    Info: Processing ended: Fri May  5 17:07:50 2017
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

@@ -6,6 +6,25 @@ clk_in => Count[2].CLK
 clk_in => Count[3].CLK
 clk_in => Count[4].CLK
 clk_in => Count[5].CLK
+clk_in => Count[6].CLK
+clk_in => Count[7].CLK
+clk_in => Count[8].CLK
+clk_in => Count[9].CLK
+clk_in => Count[10].CLK
+clk_in => Count[11].CLK
+clk_in => Count[12].CLK
+clk_in => Count[13].CLK
+clk_in => Count[14].CLK
+clk_in => Count[15].CLK
+clk_in => Count[16].CLK
+clk_in => Count[17].CLK
+clk_in => Count[18].CLK
+clk_in => Count[19].CLK
+clk_in => Count[20].CLK
+clk_in => Count[21].CLK
+clk_in => Count[22].CLK
+clk_in => Count[23].CLK
+clk_in => Count[24].CLK
 clk_out <= clk_temp.DB_MAX_OUTPUT_PORT_TYPE
 
 

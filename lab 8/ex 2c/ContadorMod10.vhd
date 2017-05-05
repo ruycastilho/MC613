@@ -14,17 +14,21 @@ ARCHITECTURE Behavior OF ContadorMod10 IS
 	BEGIN
 		PROCESS ( Clock )
 		BEGIN
-			IF (Clock'EVENT AND Clock = '1') THEN
-				IF (Load = '1') THEN
-					Q <= L ;
-				ELSIF ( Q = "1001" ) THEN
-					Q <= "0000";
-				ELSE
-					Q <= Q + '1' ;
+			IF (Enable = '1' ) THEN
+				IF (Clock'EVENT AND Clock = '1') THEN
+					IF (Load = '1') THEN
+						Q <= L ;
+					ELSIF ( Q = "1001" ) THEN
+						Q <= "0000";
+					ELSE
+						Q <= Q + '1' ;
+					END IF;
+					
 				END IF;
+
+			ELSE
+				Q <= Q;
 				
 			END IF;
-
-	
 		END PROCESS;
 END Behavior;

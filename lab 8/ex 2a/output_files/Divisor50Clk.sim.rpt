@@ -1,5 +1,5 @@
 Simulator report for Divisor50Clk
-Fri May  5 14:53:12 2017
+Fri May  5 17:07:16 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,10 +44,10 @@ applicable agreement for further details.
 ; Type                        ; Value        ;
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
-; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 25 nodes     ;
-; Simulation Coverage         ;     100.00 % ;
-; Total Number of Transitions ; 5139         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 101 nodes    ;
+; Simulation Coverage         ;      61.00 % ;
+; Total Number of Transitions ; 722031       ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 +-----------------------------+--------------+
@@ -94,63 +94,179 @@ Please use Quartus II 32-bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;     100.00 % ;
-; Total nodes checked                                 ; 25           ;
-; Total output ports checked                          ; 24           ;
-; Total output ports with complete 1/0-value coverage ; 24           ;
-; Total output ports with no 1/0-value coverage       ; 0            ;
-; Total output ports with no 1-value coverage         ; 0            ;
-; Total output ports with no 0-value coverage         ; 0            ;
+; Total coverage as a percentage                      ;      61.00 % ;
+; Total nodes checked                                 ; 101          ;
+; Total output ports checked                          ; 100          ;
+; Total output ports with complete 1/0-value coverage ; 61           ;
+; Total output ports with no 1/0-value coverage       ; 38           ;
+; Total output ports with no 1-value coverage         ; 38           ;
+; Total output ports with no 0-value coverage         ; 39           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+--------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                        ;
-+------------------------+------------------------+------------------+
-; Node Name              ; Output Port Name       ; Output Port Type ;
-+------------------------+------------------------+------------------+
-; |Divisor50Clk|Count~0  ; |Divisor50Clk|Count~0  ; out              ;
-; |Divisor50Clk|Count~1  ; |Divisor50Clk|Count~1  ; out              ;
-; |Divisor50Clk|Count~2  ; |Divisor50Clk|Count~2  ; out              ;
-; |Divisor50Clk|Count~3  ; |Divisor50Clk|Count~3  ; out              ;
-; |Divisor50Clk|Count~4  ; |Divisor50Clk|Count~4  ; out              ;
-; |Divisor50Clk|Count~5  ; |Divisor50Clk|Count~5  ; out              ;
-; |Divisor50Clk|Count[0] ; |Divisor50Clk|Count[0] ; regout           ;
-; |Divisor50Clk|Count[1] ; |Divisor50Clk|Count[1] ; regout           ;
-; |Divisor50Clk|Count[2] ; |Divisor50Clk|Count[2] ; regout           ;
-; |Divisor50Clk|Count[3] ; |Divisor50Clk|Count[3] ; regout           ;
-; |Divisor50Clk|Count[4] ; |Divisor50Clk|Count[4] ; regout           ;
-; |Divisor50Clk|Count[5] ; |Divisor50Clk|Count[5] ; regout           ;
-; |Divisor50Clk|clk_in   ; |Divisor50Clk|clk_in   ; out              ;
-; |Divisor50Clk|clk_out  ; |Divisor50Clk|clk_out  ; pin_out          ;
-; |Divisor50Clk|Add0~0   ; |Divisor50Clk|Add0~0   ; out0             ;
-; |Divisor50Clk|Add0~1   ; |Divisor50Clk|Add0~1   ; out0             ;
-; |Divisor50Clk|Add0~2   ; |Divisor50Clk|Add0~2   ; out0             ;
-; |Divisor50Clk|Add0~3   ; |Divisor50Clk|Add0~3   ; out0             ;
-; |Divisor50Clk|Add0~4   ; |Divisor50Clk|Add0~4   ; out0             ;
-; |Divisor50Clk|Add0~5   ; |Divisor50Clk|Add0~5   ; out0             ;
-; |Divisor50Clk|Add0~6   ; |Divisor50Clk|Add0~6   ; out0             ;
-; |Divisor50Clk|Add0~7   ; |Divisor50Clk|Add0~7   ; out0             ;
-; |Divisor50Clk|Add0~8   ; |Divisor50Clk|Add0~8   ; out0             ;
-; |Divisor50Clk|Equal0~0 ; |Divisor50Clk|Equal0~0 ; out0             ;
-+------------------------+------------------------+------------------+
++----------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                          ;
++-------------------------+-------------------------+------------------+
+; Node Name               ; Output Port Name        ; Output Port Type ;
++-------------------------+-------------------------+------------------+
+; |Divisor50Clk|Count[7]  ; |Divisor50Clk|Count[7]  ; regout           ;
+; |Divisor50Clk|Count[6]  ; |Divisor50Clk|Count[6]  ; regout           ;
+; |Divisor50Clk|Count[5]  ; |Divisor50Clk|Count[5]  ; regout           ;
+; |Divisor50Clk|Count[4]  ; |Divisor50Clk|Count[4]  ; regout           ;
+; |Divisor50Clk|Count[3]  ; |Divisor50Clk|Count[3]  ; regout           ;
+; |Divisor50Clk|Count[2]  ; |Divisor50Clk|Count[2]  ; regout           ;
+; |Divisor50Clk|Count[1]  ; |Divisor50Clk|Count[1]  ; regout           ;
+; |Divisor50Clk|Count[0]  ; |Divisor50Clk|Count[0]  ; regout           ;
+; |Divisor50Clk|Count~9   ; |Divisor50Clk|Count~9   ; out              ;
+; |Divisor50Clk|Count~10  ; |Divisor50Clk|Count~10  ; out              ;
+; |Divisor50Clk|Count~11  ; |Divisor50Clk|Count~11  ; out              ;
+; |Divisor50Clk|Count~12  ; |Divisor50Clk|Count~12  ; out              ;
+; |Divisor50Clk|Count~13  ; |Divisor50Clk|Count~13  ; out              ;
+; |Divisor50Clk|Count~14  ; |Divisor50Clk|Count~14  ; out              ;
+; |Divisor50Clk|Count~15  ; |Divisor50Clk|Count~15  ; out              ;
+; |Divisor50Clk|Count~16  ; |Divisor50Clk|Count~16  ; out              ;
+; |Divisor50Clk|Count~17  ; |Divisor50Clk|Count~17  ; out              ;
+; |Divisor50Clk|Count~18  ; |Divisor50Clk|Count~18  ; out              ;
+; |Divisor50Clk|Count~19  ; |Divisor50Clk|Count~19  ; out              ;
+; |Divisor50Clk|Count~20  ; |Divisor50Clk|Count~20  ; out              ;
+; |Divisor50Clk|Count~21  ; |Divisor50Clk|Count~21  ; out              ;
+; |Divisor50Clk|Count~22  ; |Divisor50Clk|Count~22  ; out              ;
+; |Divisor50Clk|Count~23  ; |Divisor50Clk|Count~23  ; out              ;
+; |Divisor50Clk|Count~24  ; |Divisor50Clk|Count~24  ; out              ;
+; |Divisor50Clk|Count[8]  ; |Divisor50Clk|Count[8]  ; regout           ;
+; |Divisor50Clk|Count[9]  ; |Divisor50Clk|Count[9]  ; regout           ;
+; |Divisor50Clk|Count[10] ; |Divisor50Clk|Count[10] ; regout           ;
+; |Divisor50Clk|Count[11] ; |Divisor50Clk|Count[11] ; regout           ;
+; |Divisor50Clk|Count[12] ; |Divisor50Clk|Count[12] ; regout           ;
+; |Divisor50Clk|Count[13] ; |Divisor50Clk|Count[13] ; regout           ;
+; |Divisor50Clk|Count[14] ; |Divisor50Clk|Count[14] ; regout           ;
+; |Divisor50Clk|clk_in    ; |Divisor50Clk|clk_in    ; out              ;
+; |Divisor50Clk|Add0~0    ; |Divisor50Clk|Add0~0    ; out0             ;
+; |Divisor50Clk|Add0~1    ; |Divisor50Clk|Add0~1    ; out0             ;
+; |Divisor50Clk|Add0~2    ; |Divisor50Clk|Add0~2    ; out0             ;
+; |Divisor50Clk|Add0~3    ; |Divisor50Clk|Add0~3    ; out0             ;
+; |Divisor50Clk|Add0~4    ; |Divisor50Clk|Add0~4    ; out0             ;
+; |Divisor50Clk|Add0~5    ; |Divisor50Clk|Add0~5    ; out0             ;
+; |Divisor50Clk|Add0~6    ; |Divisor50Clk|Add0~6    ; out0             ;
+; |Divisor50Clk|Add0~7    ; |Divisor50Clk|Add0~7    ; out0             ;
+; |Divisor50Clk|Add0~8    ; |Divisor50Clk|Add0~8    ; out0             ;
+; |Divisor50Clk|Add0~9    ; |Divisor50Clk|Add0~9    ; out0             ;
+; |Divisor50Clk|Add0~10   ; |Divisor50Clk|Add0~10   ; out0             ;
+; |Divisor50Clk|Add0~11   ; |Divisor50Clk|Add0~11   ; out0             ;
+; |Divisor50Clk|Add0~12   ; |Divisor50Clk|Add0~12   ; out0             ;
+; |Divisor50Clk|Add0~13   ; |Divisor50Clk|Add0~13   ; out0             ;
+; |Divisor50Clk|Add0~14   ; |Divisor50Clk|Add0~14   ; out0             ;
+; |Divisor50Clk|Add0~15   ; |Divisor50Clk|Add0~15   ; out0             ;
+; |Divisor50Clk|Add0~16   ; |Divisor50Clk|Add0~16   ; out0             ;
+; |Divisor50Clk|Add0~17   ; |Divisor50Clk|Add0~17   ; out0             ;
+; |Divisor50Clk|Add0~18   ; |Divisor50Clk|Add0~18   ; out0             ;
+; |Divisor50Clk|Add0~19   ; |Divisor50Clk|Add0~19   ; out0             ;
+; |Divisor50Clk|Add0~20   ; |Divisor50Clk|Add0~20   ; out0             ;
+; |Divisor50Clk|Add0~21   ; |Divisor50Clk|Add0~21   ; out0             ;
+; |Divisor50Clk|Add0~22   ; |Divisor50Clk|Add0~22   ; out0             ;
+; |Divisor50Clk|Add0~23   ; |Divisor50Clk|Add0~23   ; out0             ;
+; |Divisor50Clk|Add0~24   ; |Divisor50Clk|Add0~24   ; out0             ;
+; |Divisor50Clk|Add0~25   ; |Divisor50Clk|Add0~25   ; out0             ;
+; |Divisor50Clk|Add0~26   ; |Divisor50Clk|Add0~26   ; out0             ;
+; |Divisor50Clk|Add0~27   ; |Divisor50Clk|Add0~27   ; out0             ;
+; |Divisor50Clk|Add0~28   ; |Divisor50Clk|Add0~28   ; out0             ;
++-------------------------+-------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+-------------------------------------------------+
-; Missing 1-Value Coverage                        ;
-+-----------+------------------+------------------+
-; Node Name ; Output Port Name ; Output Port Type ;
-+-----------+------------------+------------------+
++----------------------------------------------------------------------+
+; Missing 1-Value Coverage                                             ;
++-------------------------+-------------------------+------------------+
+; Node Name               ; Output Port Name        ; Output Port Type ;
++-------------------------+-------------------------+------------------+
+; |Divisor50Clk|Count~0   ; |Divisor50Clk|Count~0   ; out              ;
+; |Divisor50Clk|Count~1   ; |Divisor50Clk|Count~1   ; out              ;
+; |Divisor50Clk|Count~2   ; |Divisor50Clk|Count~2   ; out              ;
+; |Divisor50Clk|Count~3   ; |Divisor50Clk|Count~3   ; out              ;
+; |Divisor50Clk|Count~4   ; |Divisor50Clk|Count~4   ; out              ;
+; |Divisor50Clk|Count~5   ; |Divisor50Clk|Count~5   ; out              ;
+; |Divisor50Clk|Count~6   ; |Divisor50Clk|Count~6   ; out              ;
+; |Divisor50Clk|Count~7   ; |Divisor50Clk|Count~7   ; out              ;
+; |Divisor50Clk|Count~8   ; |Divisor50Clk|Count~8   ; out              ;
+; |Divisor50Clk|Count[16] ; |Divisor50Clk|Count[16] ; regout           ;
+; |Divisor50Clk|Count[17] ; |Divisor50Clk|Count[17] ; regout           ;
+; |Divisor50Clk|Count[18] ; |Divisor50Clk|Count[18] ; regout           ;
+; |Divisor50Clk|Count[19] ; |Divisor50Clk|Count[19] ; regout           ;
+; |Divisor50Clk|Count[20] ; |Divisor50Clk|Count[20] ; regout           ;
+; |Divisor50Clk|Count[21] ; |Divisor50Clk|Count[21] ; regout           ;
+; |Divisor50Clk|Count[22] ; |Divisor50Clk|Count[22] ; regout           ;
+; |Divisor50Clk|Count[23] ; |Divisor50Clk|Count[23] ; regout           ;
+; |Divisor50Clk|Count[24] ; |Divisor50Clk|Count[24] ; regout           ;
+; |Divisor50Clk|clk_out   ; |Divisor50Clk|clk_out   ; pin_out          ;
+; |Divisor50Clk|Add0~29   ; |Divisor50Clk|Add0~29   ; out0             ;
+; |Divisor50Clk|Add0~30   ; |Divisor50Clk|Add0~30   ; out0             ;
+; |Divisor50Clk|Add0~31   ; |Divisor50Clk|Add0~31   ; out0             ;
+; |Divisor50Clk|Add0~32   ; |Divisor50Clk|Add0~32   ; out0             ;
+; |Divisor50Clk|Add0~33   ; |Divisor50Clk|Add0~33   ; out0             ;
+; |Divisor50Clk|Add0~34   ; |Divisor50Clk|Add0~34   ; out0             ;
+; |Divisor50Clk|Add0~35   ; |Divisor50Clk|Add0~35   ; out0             ;
+; |Divisor50Clk|Add0~36   ; |Divisor50Clk|Add0~36   ; out0             ;
+; |Divisor50Clk|Add0~37   ; |Divisor50Clk|Add0~37   ; out0             ;
+; |Divisor50Clk|Add0~38   ; |Divisor50Clk|Add0~38   ; out0             ;
+; |Divisor50Clk|Add0~39   ; |Divisor50Clk|Add0~39   ; out0             ;
+; |Divisor50Clk|Add0~40   ; |Divisor50Clk|Add0~40   ; out0             ;
+; |Divisor50Clk|Add0~41   ; |Divisor50Clk|Add0~41   ; out0             ;
+; |Divisor50Clk|Add0~42   ; |Divisor50Clk|Add0~42   ; out0             ;
+; |Divisor50Clk|Add0~43   ; |Divisor50Clk|Add0~43   ; out0             ;
+; |Divisor50Clk|Add0~44   ; |Divisor50Clk|Add0~44   ; out0             ;
+; |Divisor50Clk|Add0~45   ; |Divisor50Clk|Add0~45   ; out0             ;
+; |Divisor50Clk|Add0~46   ; |Divisor50Clk|Add0~46   ; out0             ;
+; |Divisor50Clk|Equal0~0  ; |Divisor50Clk|Equal0~0  ; out0             ;
++-------------------------+-------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+-------------------------------------------------+
-; Missing 0-Value Coverage                        ;
-+-----------+------------------+------------------+
-; Node Name ; Output Port Name ; Output Port Type ;
-+-----------+------------------+------------------+
++----------------------------------------------------------------------+
+; Missing 0-Value Coverage                                             ;
++-------------------------+-------------------------+------------------+
+; Node Name               ; Output Port Name        ; Output Port Type ;
++-------------------------+-------------------------+------------------+
+; |Divisor50Clk|Count~0   ; |Divisor50Clk|Count~0   ; out              ;
+; |Divisor50Clk|Count~1   ; |Divisor50Clk|Count~1   ; out              ;
+; |Divisor50Clk|Count~2   ; |Divisor50Clk|Count~2   ; out              ;
+; |Divisor50Clk|Count~3   ; |Divisor50Clk|Count~3   ; out              ;
+; |Divisor50Clk|Count~4   ; |Divisor50Clk|Count~4   ; out              ;
+; |Divisor50Clk|Count~5   ; |Divisor50Clk|Count~5   ; out              ;
+; |Divisor50Clk|Count~6   ; |Divisor50Clk|Count~6   ; out              ;
+; |Divisor50Clk|Count~7   ; |Divisor50Clk|Count~7   ; out              ;
+; |Divisor50Clk|Count~8   ; |Divisor50Clk|Count~8   ; out              ;
+; |Divisor50Clk|Count[15] ; |Divisor50Clk|Count[15] ; regout           ;
+; |Divisor50Clk|Count[16] ; |Divisor50Clk|Count[16] ; regout           ;
+; |Divisor50Clk|Count[17] ; |Divisor50Clk|Count[17] ; regout           ;
+; |Divisor50Clk|Count[18] ; |Divisor50Clk|Count[18] ; regout           ;
+; |Divisor50Clk|Count[19] ; |Divisor50Clk|Count[19] ; regout           ;
+; |Divisor50Clk|Count[20] ; |Divisor50Clk|Count[20] ; regout           ;
+; |Divisor50Clk|Count[21] ; |Divisor50Clk|Count[21] ; regout           ;
+; |Divisor50Clk|Count[22] ; |Divisor50Clk|Count[22] ; regout           ;
+; |Divisor50Clk|Count[23] ; |Divisor50Clk|Count[23] ; regout           ;
+; |Divisor50Clk|Count[24] ; |Divisor50Clk|Count[24] ; regout           ;
+; |Divisor50Clk|clk_out   ; |Divisor50Clk|clk_out   ; pin_out          ;
+; |Divisor50Clk|Add0~29   ; |Divisor50Clk|Add0~29   ; out0             ;
+; |Divisor50Clk|Add0~30   ; |Divisor50Clk|Add0~30   ; out0             ;
+; |Divisor50Clk|Add0~31   ; |Divisor50Clk|Add0~31   ; out0             ;
+; |Divisor50Clk|Add0~32   ; |Divisor50Clk|Add0~32   ; out0             ;
+; |Divisor50Clk|Add0~33   ; |Divisor50Clk|Add0~33   ; out0             ;
+; |Divisor50Clk|Add0~34   ; |Divisor50Clk|Add0~34   ; out0             ;
+; |Divisor50Clk|Add0~35   ; |Divisor50Clk|Add0~35   ; out0             ;
+; |Divisor50Clk|Add0~36   ; |Divisor50Clk|Add0~36   ; out0             ;
+; |Divisor50Clk|Add0~37   ; |Divisor50Clk|Add0~37   ; out0             ;
+; |Divisor50Clk|Add0~38   ; |Divisor50Clk|Add0~38   ; out0             ;
+; |Divisor50Clk|Add0~39   ; |Divisor50Clk|Add0~39   ; out0             ;
+; |Divisor50Clk|Add0~40   ; |Divisor50Clk|Add0~40   ; out0             ;
+; |Divisor50Clk|Add0~41   ; |Divisor50Clk|Add0~41   ; out0             ;
+; |Divisor50Clk|Add0~42   ; |Divisor50Clk|Add0~42   ; out0             ;
+; |Divisor50Clk|Add0~43   ; |Divisor50Clk|Add0~43   ; out0             ;
+; |Divisor50Clk|Add0~44   ; |Divisor50Clk|Add0~44   ; out0             ;
+; |Divisor50Clk|Add0~45   ; |Divisor50Clk|Add0~45   ; out0             ;
+; |Divisor50Clk|Add0~46   ; |Divisor50Clk|Add0~46   ; out0             ;
+; |Divisor50Clk|Equal0~0  ; |Divisor50Clk|Equal0~0  ; out0             ;
++-------------------------+-------------------------+------------------+
 
 
 +---------------------+
@@ -166,19 +282,19 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri May  5 14:53:12 2017
+    Info: Processing started: Fri May  5 17:07:14 2017
 Info: Command: quartus_sim --simulation_results_format=VWF ex2a -c Divisor50Clk
 Info (324025): Using vector source file "/home/ec2015/ra177012/Documents/MC613/lab 8/ex 2a/Waveform.vwf"
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is     100.00 %
-Info (328052): Number of transitions in simulation is 5139
+Info (328053): Simulation coverage is      61.00 %
+Info (328052): Number of transitions in simulation is 722031
 Info (324045): Vector file Divisor50Clk.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II 32-bit Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 265 megabytes
-    Info: Processing ended: Fri May  5 14:53:12 2017
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Processing ended: Fri May  5 17:07:16 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
