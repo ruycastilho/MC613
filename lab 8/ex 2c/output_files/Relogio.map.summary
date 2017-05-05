@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri May  5 18:03:47 2017
+Analysis & Synthesis Status : Successful - Fri May  5 18:51:43 2017
 Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : Relogio
 Top-level Entity Name : Relogio
 Family : Cyclone II
-Total logic elements : 155
-    Total combinational functions : 154
+Total logic elements : 157
+    Total combinational functions : 156
     Dedicated logic registers : 81
 Total registers : 81
 Total pins : 61

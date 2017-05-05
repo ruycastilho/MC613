@@ -22,14 +22,13 @@ ARCHITECTURE Behavior OF Relogio IS
 	-- Inputs
 	SIGNAL load_digit: STD_LOGIC_VECTOR(1 DOWNTO 0);
 	SIGNAL display_mode: STD_LOGIC;
-	SIGNAL load_activation: STD_LOGIC;
 	SIGNAL mode: STD_LOGIC;
 	
 	-- Counter parameters
 	SIGNAL load_value: STD_LOGIC_VECTOR(3 DOWNTO 0);
 	SIGNAL load_enable: STD_LOGIC_VECTOR(5 DOWNTO 0);
 	SIGNAL load_enable_temp: STD_LOGIC_VECTOR(5 DOWNTO 0);
-	SIGNAL cont_enable: STD_LOGIC_VECTOR(5 DOWNTO 0) := "000001";
+	SIGNAL cont_enable: STD_LOGIC_VECTOR(5 DOWNTO 0) := "000000";
 	
 	-- Clock
 	SIGNAL clock_1Hz: STD_LOGIC;
@@ -101,7 +100,6 @@ BEGIN
 		load_value 			<= SW(3 DOWNTO 0);
 		load_digit 			<= SW(6 DOWNTO 5);
 		display_mode 		<= SW(8);
-		load_activation	<= KEY(0);
 		mode 					<= SW(9);
 		
 		
@@ -122,6 +120,47 @@ BEGIN
 
 					load_enable <= (OTHERS => '0');
 
+					
+					-- Unidade seg
+					IF ( unidade_seg_out = "1000" ) THEN
+						cont_enable(1) <= '1';
+					
+					
+					ELSE
+						cont_enable(1) <= '0';	
+					
+					END IF;
+
+					
+					-- Dezena seg	
+					IF ( dezena_seg_out = "0101" ) THEN
+						-- dar set em 6 pra 0 
+					
+					ELSE
+						cont_enable(2) <= '0';	
+					
+					END IF;
+					
+					-- Unidade min
+					IF ( unidade_min_out = "1000" ) THEN
+						cont_enable(3) <= '1';
+					
+					
+					ELSE
+						cont_enable(3) <= '0';	
+					
+					END IF;
+					
+					-- Dezena min
+					IF ( dezena_min_out = "0101" ) THEN
+					-- dar set em 6 pra 0 
+					
+					ELSE
+						cont_enable(4) <= '0';	
+					
+					END IF;
+
+					-- Hora
 					IF (dezena_hora_out = "0010" ) THEN
 					
 						-- Unidade hora
@@ -146,46 +185,6 @@ BEGIN
 						END IF;
 					
 					END IF;
-
-					-- Dezena min
-					IF ( dezena_min_out = "0101" ) THEN
-						cont_enable(4) <= '1';
-					
-					
-					ELSE
-						cont_enable(4) <= '0';	
-					
-					END IF;
-
-					-- Unidade min
-					IF ( unidade_min_out = "1000" ) THEN
-						cont_enable(3) <= '1';
-					
-					
-					ELSE
-						cont_enable(3) <= '0';	
-					
-					END IF;
-
-					-- Dezena seg	
-					IF ( dezena_seg_out = "0101" ) THEN
-						cont_enable(2) <= '1';
-					
-					
-					ELSE
-						cont_enable(2) <= '0';	
-					
-					END IF;
-
-					-- Unidade seg
-					IF ( unidade_seg_out = "1000" ) THEN
-						cont_enable(1) <= '1';
-					
-					
-					ELSE
-						cont_enable(1) <= '0';	
-					
-					END IF;
 					
 					-- Display HH:MM
 					IF (display_mode = '1') THEN
@@ -205,24 +204,51 @@ BEGIN
 
 				-- Set mode
 				ELSE
-					cont_enable(0) <= '0';
+			
+					load_enable <= (OTHERS => '0');
+
 					
-							
-					case_load: CASE (load_digit) IS
-						WHEN "00" => load_enable_temp <= "000111";
-						WHEN "01" => load_enable_temp <= "001011";
-						WHEN "10" => load_enable_temp <= "010011";
-						WHEN "11" => load_enable_temp <= "100011";
+					IF (SW(0) = '1') THEN
+					
+						case_load: CASE (load_digit) IS
+							WHEN "00" => load_enable_temp <= "000111";
+											cont_enable(2) <= '1';
+							WHEN "01" => load_enable_temp <= "001011";
+											cont_enable(3) <= '1';
+							WHEN "10" => load_enable_temp <= "010011";
+											cont_enable(4) <= '1';
+							WHEN "11" => load_enable_temp <= "100011";
+											cont_enable(5) <= '1';
 		
-					END CASE;
+						END CASE;
 					
-					IF (load_activation = '1') THEN
+					
 						load_enable <= load_enable_temp;
-					
+						
+						
 					END IF;
 				
 				
+					-- Display HH:MM
+					IF (display_mode = '1') THEN
+						display0_out <= unidade_min_out;
+						display1_out <= dezena_min_out;
+						display2_out <= unidade_hora_out;
+						display3_out <= dezena_hora_out;
+					
+					-- Display MM:SS
+					ELSE
+						display0_out <= unidade_seg_out;
+						display1_out <= dezena_seg_out;
+						display2_out <= unidade_min_out;
+						display3_out <= dezena_min_out;
+						
+					END IF;
+
+				
 				END IF;
+			
+			
 			
 			END IF;
 	
