@@ -1,0 +1,57 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Maquina1 is
+	port (Reset, Clock, w: in std_logic;
+			z: out std_logic);
+end Maquina1;
+
+architecture Comportamento of Maquina1 is
+	TYPE State_type IS (A, B, C, D);
+
+	SIGNAL State : State_type;
+
+	BEGIN
+		PROCESS (Reset, Clock)
+		BEGIN
+			IF Reset = '0' THEN  
+				State <= A;
+			ELSIF (Clock'EVENT AND Clock = '1') THEN
+			
+				CASE State IS
+			
+					WHEN A =>
+						IF w = '0' THEN
+							State <= C;
+						ELSE
+							State <= B;
+						END IF;
+						
+					WHEN B =>
+					IF w = '0' THEN
+							State <= D;
+						ELSE
+							State <= C;
+						END IF;
+	
+					WHEN C =>
+						IF w = '0' THEN
+							State <= B;
+						ELSE
+							State <= C;
+						END IF;
+						
+					WHEN D =>
+					IF w = '0' THEN
+							State <= A;
+						ELSE
+							State <= C;
+						END IF;
+			
+				END CASE;
+			
+			END IF;
+		END PROCESS;
+		z <= '1' WHEN (State = C OR State = D) ELSE '0';
+		
+end Comportamento;

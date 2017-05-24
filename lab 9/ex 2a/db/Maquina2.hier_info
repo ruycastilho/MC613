@@ -1,0 +1,10 @@
+|Maquina2
+Reset => State~7.DATAIN
+Clock => State~5.DATAIN
+w => State.DATAB
+w => State.DATAA
+w => Selector0.IN1
+w => Selector1.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,8 @@
+
+State Machine - |demo_setup|Maquina3:Maquina|State
+Name State.E State.D State.C State.B State.A 
+State.A 0 0 0 0 0 
+State.B 0 0 0 1 1 
+State.C 0 0 1 0 1 
+State.D 0 1 0 0 1 
+State.E 1 0 0 0 1 
